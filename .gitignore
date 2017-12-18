@@ -1,3 +1,8 @@
+mysite4\__pycache__\
+.idea\
+*.pyc
 mysite4/__pycache__/
 .idea/
-*.pyc
+.idea/mysite4.iml
+.idea/mysite4.iml
+.idea/workspace.xml
