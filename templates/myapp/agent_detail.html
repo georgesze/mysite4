@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>代理所有订单</title>
+
+
+</head>
+<body>
+
+<div class="container">
+    <div id="toolbar">
+        <button id="remove" class="btn btn-danger" disabled>
+            <i class="glyphicon glyphicon-remove"></i> Delete
+        </button>
+    </div>
+    
+    <h1>当前代理所有订单： {{ agent_name }}</h1>
+    
+    <table id="table1"
+           data-toolbar="#toolbar"
+           data-search="true"
+           data-show-refresh="true"
+           data-show-toggle="true"
+           data-show-columns="true"
+           data-show-export="true"
+           data-detail-view="true"
+           data-detail-formatter="detailFormatter"
+           data-minimum-count-columns="2"
+           data-show-pagination-switch="true"
+           data-pagination="true"
+           data-id-field="id"
+           data-page-list="[10, 25, 50, 100, ALL]"
+           data-show-footer="false"
+           data-side-pagination="server"
+           data-url="/examples/bootstrap_table/data"
+           data-response-handler="responseHandler">
+    </table>
+    
+    <h1>所有一级下线订单</h1>
+    
+    
+    <table id="table2">
+    
+    </table>
+    
+    
+    
+    <h1>所有二级下线订单</h1>
+    <table id="table3">
+    
+    
+    
+    </table>    
+    
+    
+</div>
+
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>       
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+	
+<!-- Latest compiled and minified Locales -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
+
+<script src="http://rawgit.com/hhurz/tableExport.jquery.plugin/master/tableExport.js"></script>      
+<!-- <script src="https://github.com/hhurz/tableExport.jquery.plugin/blob/master/tableExport.js"></script>  	 -->
+
+<script src="{% static "js/export.js" %}"></script>    
+
+
+<script>
+var json_table1 = {{ agent_orders|safe }}
+var json_table2 = {{ agent_orders_2|safe }}
+var json_table3 = {{ agent_orders_3|safe }}
+
+
+</script>
+</body>
+</html>

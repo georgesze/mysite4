@@ -25,10 +25,14 @@ SECRET_KEY = 'qdt%6!2_u3rk^t^fqr(5tgtb#f^u!9m=f28r&5npf&-)#8k#a_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*.pythonanywhere.com','george666.pythonanywhere.com','127.0.0.1','13.124.193.111','www.pythonanywhere.cn']
 
 # Application definition
+
+FILE_UPLOAD_HANDLERS = [
+    'django.core.files.uploadhandler.TemporaryFileUploadHandler',
+    'django.core.files.uploadhandler.MemoryFileUploadHandler',
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -113,7 +117,8 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+#USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

@@ -1,1 +1,94 @@
 {% extends 'base.html' %}
+
+{% block page-header %}
+代理信息表
+{% endblock %}
+
+{% block page-content %}
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+          </div>
+
+
+    <table class="table table-striped">     {% comment %}#使用bootsrtap定义好的样式，将客户信息展示在一个表里{% endcomment %}
+        <thead>　　　　　　　　　　　　　　　　　{% comment %}＃表头{% endcomment %}
+            <tr>　　　　
+                <th>ID</th>　　　　　　　　　　{% comment %}＃每列标题{% endcomment %}
+                <th>QQ</th>
+                <th>姓名</th>
+                <th>渠道</th>
+                <th>咨询课程</th>
+                <th>班级类型</th>
+                <th>客户备注</th>
+                <th>状态</th>
+                <th>课程顾问</th>
+                <th>日期</th>
+            </tr>
+        </thead>
+        <tbody>　　　　　　　　　　　　　　　　　　　　　　　　　{% comment %}＃表的主题内容{% endcomment %}
+            {% for customer in customers_list %}
+                <tr>
+                    <td>{{ customer.AgentId }}</td>　　　　　　{% comment %}＃每列展示的美美容{% endcomment %}
+                    <td>{{ customer.AgentName }}</td>
+                    <td>{{ customer.name }}</td>
+                    <td>{{ customer.source }}</td>
+                    <td>{{ customer.course }}</td>
+                    <td>{{ customer.get_class_type_display }}</td>    {% comment %}＃get_class_type_display 显示中文{% endcomment %}
+                    <td>{{ customer.customer_note|truncatechars:30}}</td>　　　{% comment %}＃｜truncatechars:30 默认在页面只显示30个字节{% endcomment %}
+                    <td class="{{ customer.CalculateStatus }}">{{ customer.get_status_display }}</td>  {% comment %}＃根据不同的状态，添加底色样式，css样式在customers.css中定义{% endcomment %}
+                    <td>{{ customer.CalculateStatus}}</td>
+                    <td>{{ customer.date }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <nav>
+            <ul class="pagination">
+
+                {#左箭头部分#}
+                {% if customers_list.has_previous %}      <!--如果有上一页,就显示左箭头,如果没有上一页(即当前为第一页),就不会显示-->
+                    <li class="enabled"><a href="?page={{ customers_list.previous_page_number }}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                {% endif %}
+
+                {# 中间页码显示部分 #}
+                {% for page_num in customers_list.paginator.page_range %}         <!--遍历所有分页-->
+                    {% if page_num == customers_list.number %}                    <!--如果当前页是显示页,页码数字加底色-->
+                        <li class="active"><a href="#">{{ page_num }}<span class="sr-only">(current)</span></a></li>
+                    {% else %}
+                        <li class=""><a href="?page={{ page_num }}">{{ page_num }}<span class="sr-only">(current)</span></a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {# 右箭头部分 #}
+                {% if customers_list.has_next %}          <!--如果有下一页,就显示右箭头,如果没有下一页(即当前为最后一页),就不会显示-->
+                    <li class="enabled"><a href="?page={{ customers_list.next_page_number }}" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a></li>
+                {% endif %}
+
+            </ul>
+        </nav>
+    </div>
+
+
+
+{% endblock %}
