@@ -125,6 +125,7 @@
 
     $("#datetimeEnd").datetimepicker({
         format: 'yyyy-mm-dd',
+        startView:'month',
         minView:'month',
         language: 'zh-CN',
         autoclose:true,
@@ -134,18 +135,14 @@
         $("#datetimeEnd").datetimepicker("setStartDate",$("#datetimeStart").val())
     });
 
-{% comment %}
-	$("#datetimeEnd").datetimepicker({
-        language:  'zh-CN',
-        weekStart: 1,
-        todayBtn:  1,
-		autoclose: 1,
-		todayHighlight: 1,
-		startView: 2,
-		minView: 2,
-		forceParse: 0
+    $("#MonthPicker").datetimepicker({
+        format: 'yyyy-mm',
+        startView:'year',
+        minView:'year',
+        language: 'zh-CN',
+        autoclose:true,
     });
-{% endcomment %}
+
 </script>
 
   </body>

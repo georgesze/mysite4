@@ -110,15 +110,15 @@ def AgentList(request):
             Incometotal = aggregated['total']
 
     else:
-        start = str(get_date('last_month_start'))
-        end = str(get_date('last_month_end'))
+        start_str = str(get_date('last_month_start'))
+        end_str = str(get_date('last_month_end'))
 
     aggregated = AliConfig.objects.all().aggregate(total=Sum('IncomeTotal'))
     CollectSum = aggregated['total']
 
     return render(request, "myapp/payslip.html", {'form_agent': current_payment,
-                                            'req_start': start,
-                                            'req_end': end,
+                                            'req_start': start_str,
+                                            'req_end': end_str,
                                             # 'form_period': form,
                                             'Incometotal': Incometotal,
                                             'CollectSum': CollectSum})

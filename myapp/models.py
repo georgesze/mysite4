@@ -79,6 +79,8 @@ class AliConfig(models.Model):
     ZhaohuoName = models.CharField(max_length=20, verbose_name='找货广告名称', default=None, blank=True, null=True)
     AppPid = models.ForeignKey('Agent', related_name='AppId', verbose_name='APP广告位', default=None, blank=True, null=True)
     AppName = models.CharField(max_length=20, verbose_name='APP广告位名称', default=None, blank=True, null=True)
+    JDPid = models.ForeignKey('Agent', related_name='JDId', verbose_name='JD广告位', default=None, blank=True, null=True)
+    JDName = models.CharField(max_length=20, verbose_name='JD广告位名称', default=None, blank=True, null=True)
     ZhaohuoPerc = models.DecimalField(max_digits=3, decimal_places=2, verbose_name='找货佣金比例', blank=True, null=True)
     ZhaohuoBot = models.CharField(max_length=20, verbose_name='找货机器人', default='', blank=True)
     GroupId = models.CharField(max_length=20, verbose_name='团队合伙人', default='', blank=True)

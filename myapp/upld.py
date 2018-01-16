@@ -42,11 +42,7 @@ def upld(request):
             with open(fname, 'r') as f:
                 reader = csv.reader(f)
                 
-                #print u"读取文件结束,开始导入!"
-                time1 = time.time()
-
-                WorkList = []            
-            
+                WorkList = []
                 line_num = 0
                 x = y = 0
                 for line in reader: 
@@ -57,7 +53,7 @@ def upld(request):
                             AliOrd.objects.filter(OrderId=line[24]).delete()
                         else:
                             y = y + 1
-                        WorkList.append(AliOrd(CreatDate=line[0],
+                            WorkList.append(AliOrd(CreatDate=line[0],
                                                ClickDate=line[1],
                                                CommType=line[2],
                                                CommId=line[3],
@@ -88,12 +84,8 @@ def upld(request):
                                                PosID=line[28],
                                                PosName=line[29]))
            
-        
-            #print "读取文件耗时"+str(time2-time1)+"秒,导入数据耗时"+str(time3-time2)+"秒!"
-            time2    = time.time()
-            #update_or_create           
+            #update_or_create
             AliOrd.objects.bulk_create(WorkList)
-            time3 = time.time()
             order_list = []
             agent_file = UserForm()
             								
@@ -200,18 +192,21 @@ def upload_agent_group(request):
                 line_num = line_num + 1
                 if (line_num != 1):
                     # add agent entry 机器人广告位
-                    if line[1] != '':
-                        Agent.objects.update_or_create(AgentId=line[1], AgentName=line[0],
-                                                       defaults={'AgentName': line[0]})
+                    if line[2] != '':
+                        Agent.objects.update_or_create(AgentId=line[2],
+                                                       defaults={'AgentName': line[1]})
                     # add agent entry 小布丁广告位
-                    if line[3] != '':
-                        Agent.objects.update_or_create(AgentId=line[3], AgentName=line[2],
-                                                       defaults={'AgentName': line[2]})
+                    if line[4] != '':
+                        Agent.objects.update_or_create(AgentId=line[4],
+                                                       defaults={'AgentName': line[3]})
                     # add agent entry APP广告位
-                    if line[5] != '':
-                        Agent.objects.update_or_create(AgentId=line[5], AgentName=line[4],
-                                                       defaults={'AgentName': line[4]})
-
+                    if line[6] != '':
+                        Agent.objects.update_or_create(AgentId=line[6],
+                                                       defaults={'AgentName': line[5]})
+                    # add agent entry 京东广告位
+                    if line[8] != '':
+                        Agent.objects.update_or_create(AgentId=line[8],
+                                                       defaults={'AgentName': line[7]})
         # add aliconfig entry
         fname = request.FILES['file'].temporary_file_path()
         with open(fname, 'r') as f:
@@ -233,31 +228,37 @@ def upload_agent_group(request):
                         obj_AgentUpId = None
                         obj_ZhaohuoPid = None
                         obj_AppPid = None
+                        obj_JDPid = None
 
                         # get object
-                        if line[1] != '':
-                            obj_AgentId = Agent.objects.get(AgentId=line[1])
+                        if line[2] != '':
+                            obj_AgentId = Agent.objects.get(AgentId=line[2])
 
-                        if line[7] != '':
-                            obj_AgentUpId = Agent.objects.get(AgentId=line[7])
+                        if line[10] != '':
+                            obj_AgentUpId = Agent.objects.get(AgentId=line[10])
 
-                        if line[3] != '':
-                            obj_ZhaohuoPid = Agent.objects.get(AgentId=line[3])
+                        if line[4] != '':
+                            obj_ZhaohuoPid = Agent.objects.get(AgentId=line[4])
 
-                        if line[5] != '':
-                            obj_AppPid = Agent.objects.get(AgentId=line[5])
+                        if line[6] != '':
+                            obj_AppPid = Agent.objects.get(AgentId=line[6])
+
+                        if line[8] !='':
+                            obj_JDPid = Agent.objects.get(AgentId=line[8])
 
                     except ObjectDoesNotExist:
                         ls_error.append(line[0])
 
-                    WorkList.append(AliConfig(AgentId=obj_AgentId,
+                    WorkList.append(AliConfig(AgentName=line[0],
+                                              AgentId=obj_AgentId,
                                               AgentUpId=obj_AgentUpId,
                                               ZhaohuoPid=obj_ZhaohuoPid,
                                               AppPid=obj_AppPid,
-                                              AgentPerc=line[8],
-                                              Agent2rdPerc=line[9],
-                                              Agent3rdPerc=line[10],
-                                              Slug=line[1],
+                                              JDPid=obj_JDPid,
+                                              AgentPerc=line[11],
+                                              Agent2rdPerc=line[12],
+                                              Agent3rdPerc=line[13],
+                                              Slug=line[2],
                                               GroupId=group_id))
                     ls_count_succ = ls_count_succ + 1
         AliConfig.objects.bulk_create(WorkList)
