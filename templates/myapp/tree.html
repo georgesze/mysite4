@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block page-header %}
+
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
+        </label>
+        <label class="btn btn-primary">
+            <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+        </label>
+        <label class="btn btn-primary">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+        </label>
+    </div>
+{% endblock page-header %}
+
+{% block page-content %}
+    <ul></ul>
+
+
+    <div>
+        {% for i in agent_list %}
+
+        <button type="button" class="btn btn-success"
+            data-toggle="collapse" data-target="#collapseTree" aria-expanded="false">{{ i.AgentId }}<span class="badge">4</span>
+        </button>
+
+        {% endfor %}
+
+        <button type="button" class="btn btn-warning"
+            data-toggle="collapse" data-target="#collapseTree" aria-expanded="false">（警告）Warning
+        </button>
+
+        <button type="button" class="btn btn-danger"
+            data-toggle="collapse" data-target="#collapseTree" aria-expanded="false">（危险）Danger
+        </button>
+    </div>
+
+    <div class="tree well" id="collapseTree">
+        <li>
+            <span><i class="glyphicon glyphicon-triangle-left"></i> 顶级节点1</span> <a href="">Goes somewhere</a>
+            <ul>
+                <li>
+                    <span><i class="glyphicon glyphicon-triangle-right"></i> 一级节点1</span> <a href=""></a>
+                    <ul>
+                        <li>
+                            <span><i class="icon-leaf"></i> 二级节点1_1</span> <a href=""></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span><i class="icon-minus-sign"></i> 一级节点2</span> <a href=""></a>
+                    <ul>
+                        <li>
+                            <span><i class="icon-leaf"></i>二级节点2_1</span> <a href=""></a>
+                        </li>
+                        <li>
+                            <span><i class="icon-minus-sign"></i> 二级节点2_2</span> <a href=""></a>
+                            <ul>
+                                <li>
+                                    <span><i class="icon-minus-sign"></i>三级节点2_1</span> <a href=""></a>
+                                    <ul>
+                                        <li>
+                                            <span><i class="icon-leaf"></i>四级节点2_1</span> <a href=""></a>
+                                        </li>
+                                        <li>
+                                            <span><i class="icon-leaf"></i> 四级节点2_2</span> <a href=""></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span><i class="icon-leaf"></i>三级节点2_2</span> <a href=""></a>
+                                </li>
+                                <li>
+                                    <span><i class="icon-leaf"></i> 三级节点2_3</span> <a href=""></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span><i class="icon-leaf"></i>二级节点2_3</span> <a href=""></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span><i class="icon-folder-open"></i> 顶级节点2</span> <a href=""></a>
+            <ul>
+                <li>
+                    <span><i class="icon-leaf"></i> 一级节点2_1</span> <a href=""></a>
+                </li>
+            </ul>
+        </li>
+
+    </div>
+
+{% endblock page-content %}

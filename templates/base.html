@@ -72,7 +72,7 @@
           <ul class="nav nav-sidebar">
             <li class="active"><a href="/myapp">总览 <span class="sr-only">(current)</span></a></li>
             <li><a href="/myapp/payslip/">工资计算</a></li>
-            <li><a href="/myapp/report/">报表分析</a></li>
+            <li><a href="/myapp/tree/">关系树分析</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <li><a href="/myapp/transfer/">转账发工资</a></li>
@@ -109,7 +109,7 @@
 
     <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
     <script type="text/javascript" src="/static/bootstrap/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
-
+    <script src="/static/bootstrap/js/bootstrap-treeview.js"></script>
 
 <script type="text/javascript">
     $("#datetimeStart").datetimepicker({
@@ -142,6 +142,15 @@
         language: 'zh-CN',
         autoclose:true,
     });
+
+function getTree() {
+  // Some logic to retrieve, or generate tree structure
+  return data;
+}
+
+$('#tree').treeview({
+    data: getTree()
+});
 
 </script>
 
