@@ -78,7 +78,8 @@ def AgentList(request):
                 orders = AliOrd.objects.filter(PosID=agent_pid, SettleDate__range=(start, end))
                 CalculateOrderAmount(agent, orders)
 
-
+            # 遍历所有 代理 计算 2
+            for agent in agent_list:
                 # 计算收入 个人订单收入 + 一级下线贡献佣金 + 二级下线贡献佣金
                 CalculateIncome(agent, start, end)
 
