@@ -1,3 +1,4 @@
 myapp/__pycache__/
 .idea/
 *.pyc
+*.iml
