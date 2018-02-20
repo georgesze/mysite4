@@ -1,3 +1,7 @@
 myapp/__pycache__/
 .idea/
 *.pyc
+*.iml
+.idea/misc.xml
+.idea/mysite4.iml
+.idea/misc.xml
