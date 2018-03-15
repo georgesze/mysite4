@@ -1,5 +1,7 @@
 #coding:utf-8 
 import csv
+import xlwt
+
 #import os 
 #os.environ.setdefault("DJANGO_SETTINGS_MODULE", "www.settings") 
 
@@ -102,6 +104,30 @@ def upld(request):
         #return HttpResponse('所有订单已删除')
         return render(request, 'myapp/upld.html', {'context': '所有订单已删除'})
 
+    elif (request.method == "POST") and ('download_all_agent' in request.POST):
+        agent_list = AliConfig.objects.all()
+
+        wb = xlwt.Workbook()
+
+        ws = wb.add_sheet('所有代理信息')
+        style0 = xlwt.easyxf('font: name Times New Roman, color-index red, bold on',
+                             num_format_str='#,##0.00')
+        line_0 = [u'淘宝订单号', u'订单创建时间', u'订单结算时间', u'商品信息', u'商品类目', u'商品数量', u'商品单价',
+                  u'订单状态', u'订单类型', u'付款金额', u'代理ID', u'代理', u'代理上线ID', u'代理上线', u'佣金金额']
+        # 生成第一行
+        for i in range(0, len(line_0)):
+            ws.write(0, i, line_0[i], style0)
+        line_num = 1
+        for agent in agent_list:
+            ws.write(line_num, 0, str(agent.AgentId))
+            ws.write(line_num, 12, str(agent.AgentPerc))
+
+            line_num = line_num + 1
+
+        response = HttpResponse(content_type='application/msexcel')
+        response['Content-Disposition'] = 'attachment; filename=agents.csv'
+        wb.save(response)
+        return response
 
     else:
         uf = UserForm()

@@ -26,6 +26,12 @@
         <input type="submit" value="上传到数据库2" name="upload_agent" class="btn btn-primary"/>
     </form>
 
+    <h1>代理信息表格下载</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="submit" value="代理信息下载" name="download_all_agent" class="btn btn-primary"/>
+    </form>
+
     <h1>上传统计:</h1>
     <h1>修改记录：{{ upd_unm }}</h1>
     <h1>新建记录：{{ new_unm }}</h1>
