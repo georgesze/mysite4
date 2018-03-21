@@ -39,9 +39,9 @@ def upld(request):
             # 打开文件
             #f = request.FILES['file']
             fname = request.FILES['file'].temporary_file_path()
-            #myfile = csv.reader(open(fname, 'r', encoding="utf-8"))
+            #myfile = csv.reader(open(fname, 'r', encoding='UTF-8'))
             
-            with open(fname, 'r', encoding="utf-8") as f:
+            with open(fname, 'r', encoding='UTF-8') as f:
                 reader = csv.reader(f)
                 
                 WorkList = []
@@ -147,7 +147,7 @@ def UploadAgent(request):
         # 打开文件
         # add agent entry
         fname = request.FILES['file'].temporary_file_path()
-        with open(fname, 'r', encoding="utf-8") as f:
+        with open(fname, 'r', encoding='UTF-8') as f:
             reader = csv.reader(f)
             
             line_num = 0
@@ -164,7 +164,7 @@ def UploadAgent(request):
 
         # add aliconfig entry            
         fname = request.FILES['file'].temporary_file_path()
-        with open(fname, 'r', encoding="utf-8") as f:
+        with open(fname, 'r', encoding='UTF-8') as f:
             reader = csv.reader(f)                    
             
             WorkList = []
@@ -210,7 +210,7 @@ def upload_agent_group(request):
         # 打开文件
         # add agent entry
         fname = request.FILES['file'].temporary_file_path()
-        with open(fname, 'r', encoding="utf-8") as f:
+        with open(fname, 'r', encoding='UTF-8') as f:
             reader = csv.reader(f)
 
             line_num = 0
@@ -235,7 +235,7 @@ def upload_agent_group(request):
                                                        defaults={'AgentName': line[7]})
         # add aliconfig entry
         fname = request.FILES['file'].temporary_file_path()
-        with open(fname, 'r', encoding="utf-8") as f:
+        with open(fname, 'r', encoding='UTF-8') as f:
             reader = csv.reader(f)
 
             WorkList = []
