@@ -32,9 +32,11 @@
       <file leaf-file-name="upld.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myapp/upld.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="234">
+              <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="37" />
+              <folding>
+                <element signature="e#39#49#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,7 +54,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>upld.html</find>
       <find>col-md-2</find>
       <find>payslip</find>
       <find>myapp</find>
@@ -82,6 +83,7 @@
       <find>ok</find>
       <find>COMP</find>
       <find>utf</find>
+      <find>open</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -281,7 +283,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.246878" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.246878" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -643,9 +645,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp/upld.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="234">
+          <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="37" />
+          <folding>
+            <element signature="e#39#49#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
