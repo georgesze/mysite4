@@ -50,12 +50,12 @@ def upld(request):
                 for line in reader: 
                     line_num = line_num + 1
                     if (line_num != 1): 
-                        if AliOrd.objects.filter(OrderId=line[24]).exists():
-                            x = x + 1
-                            AliOrd.objects.filter(OrderId=line[24]).delete()
-                        else:
-                            y = y + 1
-                            WorkList.append(AliOrd(CreatDate=line[0],
+                        # if AliOrd.objects.filter(OrderId=line[24]).exists():
+                        #     x = x + 1
+                        #     AliOrd.objects.filter(OrderId=line[24]).delete()
+                        # else:
+                        #     y = y + 1
+                        WorkList.append(AliOrd(CreatDate=line[0],
                                                ClickDate=line[1],
                                                CommType=line[2],
                                                CommId=line[3],
