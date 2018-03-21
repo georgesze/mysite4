@@ -1,4 +1,5 @@
-#coding:utf-8 
+# coding:utf-8
+# -*- coding: UTF-8 -*-
 import csv
 import xlwt
 
@@ -29,8 +30,7 @@ class UserForm(forms.Form):
     #title = forms.CharField(max_length=50)
     file = forms.FileField()
 
-@transaction.atomic
-def upld(request): 
+def upld(request):
     x = y = 0
     if (request.method == "POST") and ('upload_order' in request.POST):
         uf = UserForm(request.POST, request.FILES)
