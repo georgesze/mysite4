@@ -16,7 +16,7 @@ class User(models.Model):
 class AliOrd(models.Model):
     CreatDate = models.DateTimeField(verbose_name='创建时间', default='')
     ClickDate = models.DateTimeField(verbose_name='点击时间', default='')
-    CommType = models.CharField(max_length=40, verbose_name='商品信息', default='')
+    CommType = models.CharField(max_length=200, verbose_name='商品信息', default='')
     CommId = models.CharField(max_length=20, verbose_name='商品ID', default='')
     WangWangId = models.CharField(max_length=20, verbose_name='掌柜旺旺', default='')
     StoreId = models.CharField(max_length=20, verbose_name='所属店铺', default='')
