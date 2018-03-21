@@ -8,11 +8,14 @@ from django.core import serializers
 from django.db import transaction
 from datetime import datetime
 from django.http import HttpResponse
+from time import ctime,sleep
 
 import datetime
 import json
 import decimal
 import xlwt
+import threading
+
 
 class DecimalEncoder(json.JSONEncoder):
     def default(self, o):
@@ -29,13 +32,27 @@ class SearchForm(forms.Form):
     period_str = forms.DateField(initial= last_month_start.date(), widget=forms.SelectDateWidget())
     period_end = forms.DateField(initial= last_month_end.date(), widget=forms.SelectDateWidget())
 
+class myThread (threading.Thread):   #继承父类threading.Thread
+    def __init__(self, i_agent, i_start, i_end):
+        threading.Thread.__init__(self)
+        self.i_agent = i_agent
+        self.i_start = i_start
+        self.i_end = i_end
+    def run(self):                   #把要执行的代码写到run函数里面 线程在创建后会直接运行run函数
+        #print"Starting " + self.name
+        #print_time(self.name, self.counter, 5)
+        # print"Exiting " + self.name
+        call_thread(self.i_agent, self.i_start, self.i_end)
+
 # 接收POST请求数据    payslip 1
 def AgentList(request):
     # 拿到所有agent配置
     current_payment = AliConfig.objects.all()
     Incometotal = 0
+    collect_sum = 0
 
     if (request.method == "POST") and ('calculate_income' in request.POST):
+        # 计算工资
         if request.method == "POST":
             start = datetime.datetime.strptime(request.POST.get('req_start'), "%Y-%m-%d").date()
             start_str = str(start)
@@ -89,6 +106,51 @@ def AgentList(request):
                 # 取到当前一期代理工资----用于显示
                 current_payment = PayResult.objects.filter(CalculateYear=current_year, CalculateMonth=current_month)
 
+    elif (request.method == "POST") and ('calculate_income_bg' in request.POST):
+        # 后台多线程计算工资
+        if request.method == "POST":
+            start = datetime.datetime.strptime(request.POST.get('req_start'), "%Y-%m-%d").date()
+            start_str = str(start)
+            request.session['start'] = start_str
+
+            end = datetime.datetime.strptime(request.POST.get('req_end'), "%Y-%m-%d").date()
+            end_str = str(end)
+            request.session['end'] = end_str
+            end = end + datetime.timedelta(days=1)
+
+            current_year = start.strftime('%Y')
+            current_month = start.strftime('%m')
+
+            # 取到所有代理列表----用于计算
+            agent_list = AliConfig.objects.all()
+            #AliConfig.objects.all().update(CalculateStatus='IP')
+
+            # 取到期间总金额 from upload
+            aggregated = AliOrd.objects.filter(SettleDate__range=(start, end)).aggregate(total=Sum('RebateAmt'))
+            Incometotal = aggregated['total']
+
+            # 遍历所有 代理 计算
+            threads = []
+            for agent in agent_list:
+                if agent.CalculateStatus != 'CPL':
+                    # 创建线程LIST
+                    t1 = myThread(agent, start, end)
+                    threads.append(t1)
+
+            for t in threads:
+                # 开启线程
+                t.setDaemon(True)
+                t.start()
+
+            # 等待主线程终止
+            sleep(5)
+            t.join()
+
+
+        # 取到当前一期代理工资----用于显示
+        current_payment = PayResult.objects.filter(CalculateYear=current_year, CalculateMonth=current_month)
+
+
     elif (request.method == "POST") and ('display_income' in request.POST):
         if request.method == "POST":
             start = datetime.datetime.strptime(request.POST.get('req_start'), "%Y-%m-%d").date()
@@ -105,24 +167,23 @@ def AgentList(request):
 
             # 取到当前一期代理工资
             current_payment = PayResult.objects.filter(CalculateYear=current_year, CalculateMonth=current_month)
+            aggregated1 = PayResult.objects.filter(CalculateYear=current_year, CalculateMonth=current_month).aggregate(total=Sum('IncomeTotal'))
+            Incometotal = aggregated1['total']
 
             # 取到期间总金额 from upload CSV file
-            aggregated = AliOrd.objects.filter(SettleDate__range=(start, end)).aggregate(total=Sum('RebateAmt'))
-            Incometotal = aggregated['total']
+            aggregated2 = AliOrd.objects.filter(SettleDate__range=(start, end)).aggregate(total=Sum('RebateAmt'))
+            collect_sum = aggregated2['total']
 
     else:
         start_str = str(get_date('last_month_start'))
         end_str = str(get_date('last_month_end'))
-
-    aggregated = AliConfig.objects.all().aggregate(total=Sum('IncomeTotal'))
-    CollectSum = aggregated['total']
 
     return render(request, "myapp/payslip.html", {'form_agent': current_payment,
                                             'req_start': start_str,
                                             'req_end': end_str,
                                             # 'form_period': form,
                                             'Incometotal': Incometotal,
-                                            'CollectSum': CollectSum})
+                                            'CollectSum': collect_sum})
 
 def AgentTree(request):
     # 拿到所有agent配置    payslip 2
@@ -298,7 +359,7 @@ def CalculateOrderAgent(agent, start, end):
                                                                                   IncomePercSelf=agent.AgentPerc,
                                                                                   SharePercUp1=agent.Agent2rdPerc,
                                                                                   SharePercUp2=agent.Agent3rdPerc)
-@transaction.atomic
+
 def CalculateOrderAmount(agent, orders):
     for order_item in orders:
         update_flag = False
@@ -377,6 +438,7 @@ def CalculateIncome(agent, start, end):
 
     # 总佣金
     agent.IncomeTotal = agent.IncomeSelf + agent.IncomeLv1 + agent.IncomeLv2
+    agent.CalculateStatus = 'CPL'
 
     # 保存计算结果
     agent.save()
@@ -407,7 +469,7 @@ def save_pay_result(agent, start, end):
                     'IncomeLv2':      agent.IncomeLv2,
                     'IncomeTotal':    agent.IncomeTotal,
                     'Slug':           agent.Slug,
-                    'CalculateStatus': 'OK',
+                    'CalculateStatus': agent.CalculateStatus,
                     'CalculateYear':  year,
                     'CalculateMonth': month}
 
@@ -457,3 +519,33 @@ def get_date(function):
         this_month_start = datetime.datetime(now.year, now.month, 1)
         last_month_end = this_month_start - datetime.timedelta(days=1)
         return last_month_end.date()
+
+
+def call_thread(agent, start, end):
+    # start = datetime.datetime.strptime(start, "%Y-%m-%d").date()
+    # end = datetime.datetime.strptime(end, "%Y-%m-%d").date()
+
+    # 计算所有订单佣金 volume 20000+
+    CalculateOrderAgent(agent, start, end)
+
+    # 分别计算机器人,找货，APP的订单
+    agent_pid = agent.AgentId
+    orders = AliOrd.objects.filter(PosID=agent_pid, SettleDate__range=(start, end))
+    CalculateOrderAmount(agent, orders)
+
+    # ZhaohuoPid can be None type
+    agent_pid = str(agent.ZhaohuoPid)
+    orders = AliOrd.objects.filter(PosID=agent_pid, SettleDate__range=(start, end))
+    CalculateOrderAmount(agent, orders)
+
+    agent_pid = str(agent.AppPid)
+    orders = AliOrd.objects.filter(PosID=agent_pid, SettleDate__range=(start, end))
+    CalculateOrderAmount(agent, orders)
+
+    # 遍历所有 代理 计算 2
+    # 计算收入 个人订单收入 + 一级下线贡献佣金 + 二级下线贡献佣金
+    CalculateIncome(agent, start, end)
+
+    # 保存月佣金计算记录
+    save_pay_result(agent, start, end)
+

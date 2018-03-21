@@ -26,12 +26,13 @@
                     <input type="submit" value="显示当前期间佣金" name="display_income" class="btn btn-primary">
 
                     <input type="submit" value="计算当前期间佣金" name="calculate_income" class="btn btn-primary">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                    重新计算当前期间佣金
+                    <input type="submit" value="后台计算当前期间佣金" name="calculate_income_bg" class="btn btn-primary">
+{#                    <button type="button" class="btn btn-primary" name="calculate_income2" data-toggle="modal" data-target="#myModal">#}
+{#                    重新计算当前期间佣金#}
                     </button>
                 </div>
             </div>
-            <h1>期间总收入（所有导入数据）： {{ Incometotal }}</h1>
+            <h1>当前期间总收入（所有导入订单总金额）： {{ CollectSum }}</h1>
         </form>
     </div>
 
@@ -48,7 +49,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-        <button type="submit" class="btn btn-primary" name="calculate_income">开始执行</button>
+        <button type="submit" class="btn btn-primary" name="calculate_income2">开始执行</button>
       </div>
     </div>
   </div>
@@ -110,7 +111,7 @@
                         <tr>
                             <td colspan=2 style="text-align:right;">合计</td>
                             <td colspan=8></td>
-                            <td align="right" id="sum">{{ CollectSum }}</td>
+                            <td align="right" id="sum">{{ Incometotal }}</td>
                         </tr>
                     {% else %}
                         <strong>There are no Agent present.</strong>
