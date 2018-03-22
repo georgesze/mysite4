@@ -112,15 +112,29 @@ def upld(request):
         ws = wb.add_sheet('所有代理信息')
         style0 = xlwt.easyxf('font: name Times New Roman, color-index red, bold on',
                              num_format_str='#,##0.00')
-        line_0 = [u'淘宝订单号', u'订单创建时间', u'订单结算时间', u'商品信息', u'商品类目', u'商品数量', u'商品单价',
-                  u'订单状态', u'订单类型', u'付款金额', u'代理ID', u'代理', u'代理上线ID', u'代理上线', u'佣金金额']
+        line_0 = [u'合伙人ID', u'代理机器人名称', u'代理机器人ID', u'代理找货名称', u'代理找货ID', u'代理APP名称', u'代理APPID',
+                  u'代理京东名称', u'京东ID', u'代理上线', u'上线机器人ID', u'自获佣金比例', u'提取二级佣金比例', u'提取三级佣金比例',  u'加入时间', u'已删除合伙人']
         # 生成第一行
         for i in range(0, len(line_0)):
             ws.write(0, i, line_0[i], style0)
         line_num = 1
         for agent in agent_list:
-            ws.write(line_num, 0, str(agent.AgentId))
-            ws.write(line_num, 12, str(agent.AgentPerc))
+            ws.write(line_num, 0, str(agent.GroupId))
+            ws.write(line_num, 1, str(agent.AgentName))
+            ws.write(line_num, 2, str(agent.AgentId))
+            ws.write(line_num, 3, str(agent.ZhaohuoPid.AgentName if agent.ZhaohuoPid else ""))
+            ws.write(line_num, 4, str(agent.ZhaohuoPid))
+            ws.write(line_num, 5, str(agent.AppPid.AgentName if agent.AppPid else ""))
+            ws.write(line_num, 6, str(agent.AppPid))
+            ws.write(line_num, 7, str(agent.JDPid.AgentName if agent.JDPid else ""))
+            ws.write(line_num, 8, str(agent.JDPid))
+            ws.write(line_num, 9, str(agent.AgentUpId.AgentName if agent.AgentUpId else ""))
+            ws.write(line_num, 10, str(agent.AgentUpId))
+            ws.write(line_num, 11, str(agent.AgentPerc))
+            ws.write(line_num, 12, str(agent.Agent2rdPerc))
+            ws.write(line_num, 13, str(agent.Agent3rdPerc))
+            ws.write(line_num, 14, str(agent.ValidBegin))
+            ws.write(line_num, 15, str(agent.Active))
 
             line_num = line_num + 1
 
