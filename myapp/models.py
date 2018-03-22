@@ -19,7 +19,7 @@ class AliOrd(models.Model):
     CommType = models.CharField(max_length=200, verbose_name='商品信息', default='')
     CommId = models.CharField(max_length=20, verbose_name='商品ID', default='')
     WangWangId = models.CharField(max_length=20, verbose_name='掌柜旺旺', default='')
-    StoreId = models.CharField(max_length=20, verbose_name='所属店铺', default='')
+    StoreId = models.CharField(max_length=200, verbose_name='所属店铺', default='')
     CommQty = models.CharField(max_length=20, verbose_name='商品数', default='')
     CommPrice = models.CharField(max_length=20, verbose_name='商品单价', default='')
     OrdStatus = models.CharField(max_length=20, verbose_name='订单状态', default='')
