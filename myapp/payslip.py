@@ -1,4 +1,7 @@
 # coding:utf-8
+from django.core.exceptions import ObjectDoesNotExist
+#from django.db.models.fields.related_descriptors import RelatedObjectDoesNotExist
+
 from django.shortcuts import render
 from django.views.decorators import csrf
 from django.db.models import Count, Min, Sum, Avg
@@ -9,7 +12,9 @@ from django.db import transaction
 from datetime import datetime
 from django.http import HttpResponse
 from time import ctime,sleep
+from django.db import DatabaseError
 
+import logging
 import datetime
 import json
 import decimal
@@ -33,16 +38,14 @@ class SearchForm(forms.Form):
     period_end = forms.DateField(initial= last_month_end.date(), widget=forms.SelectDateWidget())
 
 class myThread (threading.Thread):   #继承父类threading.Thread
-    def __init__(self, i_agent, i_start, i_end):
+    def __init__(self,i_mylog, i_agent, i_start, i_end):
         threading.Thread.__init__(self)
         self.i_agent = i_agent
         self.i_start = i_start
         self.i_end = i_end
+        self.i_mylog = i_mylog
     def run(self):                   #把要执行的代码写到run函数里面 线程在创建后会直接运行run函数
-        #print"Starting " + self.name
-        #print_time(self.name, self.counter, 5)
-        # print"Exiting " + self.name
-        call_thread(self.i_agent, self.i_start, self.i_end)
+        call_thread(self.i_mylog, self.i_agent, self.i_start, self.i_end)
 
 # 接收POST请求数据    payslip 1
 def AgentList(request):
@@ -108,43 +111,54 @@ def AgentList(request):
 
     elif (request.method == "POST") and ('calculate_income_bg' in request.POST):
         # 后台多线程计算工资
-        if request.method == "POST":
-            start = datetime.datetime.strptime(request.POST.get('req_start'), "%Y-%m-%d").date()
-            start_str = str(start)
-            request.session['start'] = start_str
+        start = datetime.datetime.strptime(request.POST.get('req_start'), "%Y-%m-%d").date()
+        start_str = str(start)
+        request.session['start'] = start_str
 
-            end = datetime.datetime.strptime(request.POST.get('req_end'), "%Y-%m-%d").date()
-            end_str = str(end)
-            request.session['end'] = end_str
-            end = end + datetime.timedelta(days=1)
+        end = datetime.datetime.strptime(request.POST.get('req_end'), "%Y-%m-%d").date()
+        end_str = str(end)
+        request.session['end'] = end_str
+        end = end + datetime.timedelta(days=1)
 
-            current_year = start.strftime('%Y')
-            current_month = start.strftime('%m')
+        current_year = start.strftime('%Y')
+        current_month = start.strftime('%m')
 
-            # 取到所有代理列表----用于计算
-            agent_list = AliConfig.objects.all()
-            #AliConfig.objects.all().update(CalculateStatus='IP')
+        # 取到所有代理列表----用于计算
+        agent_list = AliConfig.objects.all()
+        #AliConfig.objects.all().update(CalculateStatus='IP')
 
-            # 取到期间总金额 from upload
-            aggregated = AliOrd.objects.filter(SettleDate__range=(start, end)).aggregate(total=Sum('RebateAmt'))
-            Incometotal = aggregated['total']
+        # 取到期间总金额 from upload
+        aggregated = AliOrd.objects.filter(SettleDate__range=(start, end)).aggregate(total=Sum('RebateAmt'))
+        Incometotal = aggregated['total']
 
-            # 遍历所有 代理 计算
-            threads = []
-            for agent in agent_list:
-                if agent.CalculateStatus != 'CPL':
+        # 遍历所有 代理 计算
+        threads = []
+        mylog = logging.getLogger('mylog.file')
+        mylog.warning('开始多线程计算工资')
+
+        for agent in agent_list:
+            # check if PayResult exist
+            try:
+                q_payresult = PayResult.objects.get(AgentId=agent.AgentId, CalculateYear=current_year,
+                                                    CalculateMonth=current_month)
+            except ObjectDoesNotExist:
+                # 创建线程LIST
+                t1 = myThread(mylog, agent, start, end)
+                threads.append(t1)
+            else:
+                if q_payresult.CalculateStatus != 'CPL':
                     # 创建线程LIST
-                    t1 = myThread(agent, start, end)
+                    t1 = myThread(mylog, agent, start, end)
                     threads.append(t1)
 
-            for t in threads:
-                # 开启线程
-                t.setDaemon(True)
-                t.start()
+        for t in threads:
+            # 开启线程
+            t.setDaemon(True)
+            t.start()
 
-            # 等待主线程终止
-            sleep(5)
-            t.join()
+        # 等待主线程终止
+        sleep(5)
+        t.join()
 
 
         # 取到当前一期代理工资----用于显示
@@ -438,7 +452,7 @@ def CalculateIncome(agent, start, end):
 
     # 总佣金
     agent.IncomeTotal = agent.IncomeSelf + agent.IncomeLv1 + agent.IncomeLv2
-    agent.CalculateStatus = 'CPL'
+    #agent.CalculateStatus = 'CPL'
 
     # 保存计算结果
     agent.save()
@@ -521,31 +535,43 @@ def get_date(function):
         return last_month_end.date()
 
 
-def call_thread(agent, start, end):
-    # start = datetime.datetime.strptime(start, "%Y-%m-%d").date()
-    # end = datetime.datetime.strptime(end, "%Y-%m-%d").date()
+def call_thread(mylog, agent, start, end):
+    #mylog = logging.getLogger('mylog.file')
+    try:
+        # 计算所有订单佣金 volume 20000+
+        CalculateOrderAgent(agent, start, end)
 
-    # 计算所有订单佣金 volume 20000+
-    CalculateOrderAgent(agent, start, end)
+        # 分别计算机器人,找货，APP的订单
+        agent_pid = agent.AgentId
+        orders = AliOrd.objects.filter(PosID=agent_pid, SettleDate__range=(start, end))
+        CalculateOrderAmount(agent, orders)
 
-    # 分别计算机器人,找货，APP的订单
-    agent_pid = agent.AgentId
-    orders = AliOrd.objects.filter(PosID=agent_pid, SettleDate__range=(start, end))
-    CalculateOrderAmount(agent, orders)
+        # ZhaohuoPid can be None type
+        agent_pid = str(agent.ZhaohuoPid)
+        orders = AliOrd.objects.filter(PosID=agent_pid, SettleDate__range=(start, end))
+        CalculateOrderAmount(agent, orders)
 
-    # ZhaohuoPid can be None type
-    agent_pid = str(agent.ZhaohuoPid)
-    orders = AliOrd.objects.filter(PosID=agent_pid, SettleDate__range=(start, end))
-    CalculateOrderAmount(agent, orders)
+        agent_pid = str(agent.AppPid)
+        orders = AliOrd.objects.filter(PosID=agent_pid, SettleDate__range=(start, end))
+        CalculateOrderAmount(agent, orders)
 
-    agent_pid = str(agent.AppPid)
-    orders = AliOrd.objects.filter(PosID=agent_pid, SettleDate__range=(start, end))
-    CalculateOrderAmount(agent, orders)
+        # 遍历所有 代理 计算 2
+        # 计算收入 个人订单收入 + 一级下线贡献佣金 + 二级下线贡献佣金
+        CalculateIncome(agent, start, end)
 
-    # 遍历所有 代理 计算 2
-    # 计算收入 个人订单收入 + 一级下线贡献佣金 + 二级下线贡献佣金
-    CalculateIncome(agent, start, end)
+    except DatabaseError as err:
+        my_msg = str(agent.AgentId.AgentName)+' '+str(agent.AgentId)+' '+str(err)
+        mylog.warning(my_msg)
 
-    # 保存月佣金计算记录
-    save_pay_result(agent, start, end)
+    except ObjectDoesNotExist as err:
+        my_msg = str(agent.AgentId.AgentName)+' '+str(agent.AgentId)+' '+str(err)
+        mylog.warning(my_msg)
 
+    else:
+        # 计算成功
+        my_msg = str(agent.AgentId.AgentName)+' '+str(agent.AgentId) + ' 计算成功'
+        mylog.warning(my_msg)
+
+        agent.CalculateStatus = 'CPL'
+        # 保存月佣金计算记录
+        save_pay_result(agent, start, end)

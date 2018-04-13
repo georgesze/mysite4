@@ -140,3 +140,36 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        }
+    },
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            #'class': 'cloghandler.ConcurrentRotatingFileHandler',
+            #'maxBytes': 1024 * 1024 * 10,
+            #'backupCount': 50,
+            #'delay': True,
+            'filename': os.path.join(BASE_DIR, "log", 'payslip.log').replace('\\', '/'),
+            'formatter': 'verbose'
+        }
+    },
+    'loggers': {
+        'mylog.file': {
+            'handlers': ['file'],
+            'propagate': True,
+        },
+    }
+}

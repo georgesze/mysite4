@@ -289,7 +289,7 @@ def upload_agent_group(request):
                     except ObjectDoesNotExist:
                         ls_error.append(line[0])
 
-                    WorkList.append(AliConfig(AgentName=line[0],
+                    WorkList.append(AliConfig(AgentName=line[1],
                                               AgentId=obj_AgentId,
                                               AgentUpId=obj_AgentUpId,
                                               ZhaohuoPid=obj_ZhaohuoPid,
@@ -301,9 +301,10 @@ def upload_agent_group(request):
                                               Slug=line[2],
                                               GroupId=group_id))
                     ls_count_succ = ls_count_succ + 1
-        AliConfig.objects.bulk_create(WorkList)
 
-        return HttpResponse('成功更新')
+            AliConfig.objects.bulk_create(WorkList)
+
+            return HttpResponse('成功更新')
 
 
 
