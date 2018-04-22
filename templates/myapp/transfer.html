@@ -2,23 +2,73 @@
 
 {% block page-header %}
     <h1>支付宝批量转账</h1>
-    <div class="container-fluid">
-
-            <div class="col-md-2">
-                <label>发工资月份</label>
-                <div class="input-group date form_date" id="MonthPicker" name="MonthPicker">
-                    <input class="form-control" size="16" type="text" value="" readonly>
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                </div>
-            </div>
-    </div>
-
 {% endblock %}
 
 {% block page-content %}
+    <label>发工资月份</label>
 
+    <div class="container-fluid">
+    <form method="post">
+        {% csrf_token %}
+            <div class="col-md-2">
+                <div class="input-group date form_date" id="MonthPicker">
+                    <input class="form-control" size="16" type="text" name ="month_picker" value="{{ month_picker }}" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+                <p class="help-block">请选择月份然后点击显示或生成文件。</p>
+            </div>
 
+            <div class="col-md-2">
+                <input type="submit" value="显示" name="display_payslip" class="btn btn-primary">
+                <input type="submit" value="生成转账CSV文件" name="generate_transfer" class="btn btn-primary">
+            </div>
+    </div>
 
+    <form id="changelist-form" method="post">
+    {% csrf_token %}
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <table class="table table-hover table-striped table-condensed">
+                    <thead>
+                    <tr>
+{#                        <th><input type="checkbox" name="checkAll" id="action-toggle"/></th>#}
+                        <th scope="col" class="action-checkbox-column">
+                        <div class="text"><span><input type="checkbox" name="all"></span>全选</div>
+                        <div class="clear"></div>
+                        </th>
+                        <th>代理ID</th>
+                        <th>代理名称</th>
+                        <th>结算年份</th>
+                        <th>结算月份</th>
+                        <th>结算金额</th>
+                        <th>结算账号</th>
+                    </tr>
+                    </thead>
 
+                    <tbody id="tb">
+                    {% if form_payslip %}
+                        {% for payslip in form_payslip %}
+                            <tr class="selected">
+                                <td><input type="checkbox" name="selected" class="action-select" value="{{ payslip.pk }}" onclick="userCheck(this)"></td>
+{#                                <td class="action-checkbox"><input type="checkbox" name="_selected_action" value={{ payslip.pk }} class="action-select"></td>#}
+                                <td align="left">{{ payslip.AgentId }}</td>
+                                <td align="left">{{ payslip.AgentName }}</td>
+                                <td align="left">{{ payslip.CalculateYear }}</td>
+                                <td align="left">{{ payslip.CalculateMonth }}</td>
+                                <td align="left">{{ payslip.IncomeTotal }}</td>
+                                <td align="left">{{ payslip.PayAccount }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <strong>没有选择记录</strong>
+                    {% endif %}
 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </form>
 {% endblock %}
+

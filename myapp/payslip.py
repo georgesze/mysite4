@@ -437,6 +437,14 @@ def CalculateIncome(agent, start, end):
     # 一级下线贡献佣金
     aggregatedLv1 = AliOrd.objects.filter(UplineId=agent_pid, SettleDate__range=(start, end)).aggregate(
         IncomeLv1=Sum('ShareUp1'))
+
+    # #新算法
+    # aggregatedLv1_new = AliOrd.objects.filter(UplineId=agent_pid, SettleDate__range=(start, end)).aggregate(
+    #     IncomeLv1=Sum('RebateAmt'))
+    #
+    # #l_temp = round(order_item.IncomeSelf * agent.Agent2rdPerc, 2)
+    # aggregatedLv1_new = aggregatedLv1_new**agent.Agent2rdPerc
+
     if aggregatedLv1['IncomeLv1'] == None:
         agent.IncomeLv1 = 0
     else:
