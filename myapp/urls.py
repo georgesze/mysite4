@@ -8,7 +8,7 @@ from myapp import tree as tree_views
 import myapp
 
 urlpatterns = [
-    url(r'^$',views.dashboard),
+    url(r'^$', views.dashboard),
     url(r'^upload/$', upld_views.upld),
     url(r'^payslip/$', payslip_views.AgentList),
     url(r'^transfer/$', transfer_views.AliTransfer),
