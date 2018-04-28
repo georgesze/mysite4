@@ -1,8 +1,28 @@
 {% extends 'base.html' %}
 
 {% block page-header %}
-代理信息表
+<h1>代理信息表</h1>
+
 <div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+
+<div class="btn-group" data-toggle="buttons">
+	<label class="btn btn-primary">
+		<input type="radio" name="options" id="option1"> 全部
+	</label>
+    <label class="btn btn-primary">
+		<input type="radio" name="options" id="option2"> 今年
+	</label>
+    <label class="btn btn-primary">
+		<input type="radio" name="options" id="option3"> 半年
+	</label>
+	<label class="btn btn-primary">
+		<input type="radio" name="options" id="option4"> 三个月
+	</label>
+	<label class="btn btn-primary">
+		<input type="radio" name="options" id="option5"> 当月
+	</label>
+</div>
+
 {% endblock %}
 
 {% block page-content %}
