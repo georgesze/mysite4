@@ -49,7 +49,7 @@ def AliTransfer(request):
             line_count = 1
             for agent in transfer_list:
                 ws.write(line_num, 0, str(line_count))
-                ws.write(line_num, 1, str(agent.PayAccount))
+                ws.write(line_num, 1, str(agent.PayName))
                 ws.write(line_num, 2, str(agent.PayAccount))
                 ws.write(line_num, 3, str(agent.IncomeTotal))
                 ws.write(line_num, 4, '佣金')

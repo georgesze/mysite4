@@ -25,35 +25,36 @@
                 <div class="col-md-4">
                     <input type="submit" value="显示当前期间佣金" name="display_income" class="btn btn-primary">
 
-{#                    <input type="submit" value="计算当前期间佣金" name="calculate_income" class="btn btn-primary">#}
+                    {#                    <input type="submit" value="计算当前期间佣金" name="calculate_income" class="btn btn-primary">#}
                     <input type="submit" value="后台计算当前期间佣金" name="calculate_income_bg" class="btn btn-primary">
-{#                    <button type="button" class="btn btn-primary" name="calculate_income2" data-toggle="modal" data-target="#myModal">#}
-{#                    重新计算当前期间佣金#}
-{#                    </button>#}
+                    {#                    <button type="button" class="btn btn-primary" name="calculate_income2" data-toggle="modal" data-target="#myModal">#}
+                    {#                    重新计算当前期间佣金#}
+                    {#                    </button>#}
                 </div>
             </div>
             <h1>当前期间总收入（所有导入订单总金额）： {{ CollectSum }}</h1>
         </form>
     </div>
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="form">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">！警告！</h4>
-      </div>
-      <div class="modal-body">
-        是否重新计算当前期间佣金，可能会花费较多时间 ！
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-        <button type="submit" class="btn btn-primary" name="calculate_income2">开始执行</button>
-      </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="form">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">！警告！</h4>
+                </div>
+                <div class="modal-body">
+                    是否重新计算当前期间佣金，可能会花费较多时间 ！
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="submit" class="btn btn-primary" name="calculate_income2">开始执行</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 
 
@@ -122,5 +123,4 @@
             </div>
         </div>
     </div>
-
 {% endblock page-content %}

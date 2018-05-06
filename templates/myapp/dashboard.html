@@ -7,19 +7,19 @@
 
 <div class="btn-group" data-toggle="buttons">
 	<label class="btn btn-primary">
-		<input type="radio" name="options" id="option1"> 全部
+		<input type="radio" name="option1" id="option1"> 全部
 	</label>
     <label class="btn btn-primary">
-		<input type="radio" name="options" id="option2"> 今年
+		<input type="radio" name="option2" id="option2"> 今年
 	</label>
     <label class="btn btn-primary">
-		<input type="radio" name="options" id="option3"> 半年
+		<input type="radio" name="option3" id="option3"> 半年
 	</label>
 	<label class="btn btn-primary">
-		<input type="radio" name="options" id="option4"> 三个月
+		<input type="radio" name="option4" id="option4"> 三个月
 	</label>
 	<label class="btn btn-primary">
-		<input type="radio" name="options" id="option5"> 当月
+		<input type="radio" name="option5" id="option5"> 当月
 	</label>
 </div>
 
@@ -110,3 +110,52 @@
         </nav>
     </div>
 {% endblock %}
+
+{% block script %}
+    <script type="text/javascript">
+        $(function () {
+
+            $(document).ready(function () {
+                var chart = {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false
+                };
+                var title = {
+                    text: '总佣金比例'
+                };
+                var tooltip = {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                };
+                var plotOptions = {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}%</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                };
+
+                var series = [{
+                    type: 'pie',
+                    name: '佣金比例',
+                    data: {{ q_orders|safe }},
+                }];
+
+                var json = {};
+                json.chart = chart;
+                json.title = title;
+                json.tooltip = tooltip;
+                json.series = series;
+                json.plotOptions = plotOptions;
+
+                $('#container').highcharts(json);
+            });
+        });
+    </script>
+{% endblock script %}

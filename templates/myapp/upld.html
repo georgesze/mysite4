@@ -9,7 +9,7 @@
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ uf }}
-        <input type="submit" value="上传到数据库" name="upload_order" class="btn btn-primary"/>
+        <input type="submit" value="上传订单" name="upload_order" class="btn btn-primary"/>
     </form>
 
     <h1>代理订单删除，谨慎操作！！！！</h1>
@@ -23,7 +23,7 @@
         {% csrf_token %}
         {{ agent_file }}
 
-        <input type="submit" value="上传到数据库2" name="upload_agent" class="btn btn-primary"/>
+        <input type="submit" value="上传代理信息" name="upload_agent" class="btn btn-primary"/>
     </form>
 
     <h1>代理信息表格下载</h1>
