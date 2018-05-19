@@ -160,6 +160,11 @@ def AgentList(request):
         sleep(5)
         t.join()
 
+        for agent in agent_list:
+            sumup_pay_result(agent, start, end)
+            # 保存月佣金计算记录
+            save_sumup_result(agent, start, end)
+
 
         # 取到当前一期代理工资----用于显示
         current_payment = PayResult.objects.filter(CalculateYear=current_year, CalculateMonth=current_month)
@@ -433,17 +438,43 @@ def CalculateIncome(agent, start, end):
 
     agent.IncomeSelf = income_agent + income_zhaohuo + income_app
 
+    # ##################下线佣金计算#################################
+    # # 一级下线贡献佣金
+    # aggregatedLv1 = AliOrd.objects.filter(UplineId=agent_pid, SettleDate__range=(start, end)).aggregate(
+    #     IncomeLv1=Sum('ShareUp1'))
+    #
+    # # #新算法
+    # # aggregatedLv1_new = AliOrd.objects.filter(UplineId=agent_pid, SettleDate__range=(start, end)).aggregate(
+    # #     IncomeLv1=Sum('RebateAmt'))
+    # #
+    # # #l_temp = round(order_item.IncomeSelf * agent.Agent2rdPerc, 2)
+    # # aggregatedLv1_new = aggregatedLv1_new**agent.Agent2rdPerc
+    #
+    # if aggregatedLv1['IncomeLv1'] == None:
+    #     agent.IncomeLv1 = 0
+    # else:
+    #     agent.IncomeLv1 = aggregatedLv1['IncomeLv1']
+    #
+    # # 二级下线贡献佣金
+    # aggregatedLv2 = AliOrd.objects.filter(Up2lineId=agent_pid, SettleDate__range=(start, end)).aggregate(
+    #     IncomeLv2=Sum('ShareUp2'))
+    # if aggregatedLv2['IncomeLv2'] == None:
+    #     agent.IncomeLv2 = 0
+    # else:
+    #     agent.IncomeLv2 = aggregatedLv2['IncomeLv2']
+    #
+    # # 总佣金
+    # agent.IncomeTotal = agent.IncomeSelf + agent.IncomeLv1 + agent.IncomeLv2
+    # #agent.CalculateStatus = 'CPL'
+    #
+    # 保存计算结果
+    # agent.save()
+
+def sumup_pay_result(agent, start, end):
     ##################下线佣金计算#################################
     # 一级下线贡献佣金
     aggregatedLv1 = AliOrd.objects.filter(UplineId=agent_pid, SettleDate__range=(start, end)).aggregate(
         IncomeLv1=Sum('ShareUp1'))
-
-    # #新算法
-    # aggregatedLv1_new = AliOrd.objects.filter(UplineId=agent_pid, SettleDate__range=(start, end)).aggregate(
-    #     IncomeLv1=Sum('RebateAmt'))
-    #
-    # #l_temp = round(order_item.IncomeSelf * agent.Agent2rdPerc, 2)
-    # aggregatedLv1_new = aggregatedLv1_new**agent.Agent2rdPerc
 
     if aggregatedLv1['IncomeLv1'] == None:
         agent.IncomeLv1 = 0
@@ -460,10 +491,6 @@ def CalculateIncome(agent, start, end):
 
     # 总佣金
     agent.IncomeTotal = agent.IncomeSelf + agent.IncomeLv1 + agent.IncomeLv2
-    #agent.CalculateStatus = 'CPL'
-
-    # 保存计算结果
-    agent.save()
 
 
 def save_pay_result(agent, start, end):
@@ -498,6 +525,20 @@ def save_pay_result(agent, start, end):
         PayResult.objects.update_or_create(
             AgentId=agent.AgentId, CalculateYear=year, CalculateMonth=month,
             defaults=updatedict)
+
+def save_sumup_result(agent, start, end):
+    try:
+        if not start == None:
+            year = start.strftime('%Y')
+            month = start.strftime('%m')
+
+            PayResult.objects.filter(AgentId=agent.AgentId, CalculateYear=year, CalculateMonth=month).update(
+                IncomeLv1=agent.IncomeLv1,
+                IncomeLv2=agent.IncomeLv2,
+                IncomeTotal=agent.IncomeTotal)
+    except ObjectDoesNotExist:
+        pass
+
 
 
 def excel_add_sheet(ws, context_dict):

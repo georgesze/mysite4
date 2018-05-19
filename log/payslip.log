@@ -229,3 +229,408 @@ WARNING 2018-04-21 21:57:22,022 payslip 18664 18152 开始多线程计算工资
 WARNING 2018-04-21 22:04:09,594 payslip 8732 13892 开始多线程计算工资
 WARNING 2018-04-21 22:21:12,584 payslip 14740 4180 开始多线程计算工资
 WARNING 2018-04-21 22:21:15,014 payslip 14740 13816 娃娃红包群 184272516 计算成功
+WARNING 2018-05-20 04:52:41,522 payslip 5960 11144 开始多线程计算工资
+WARNING 2018-05-20 04:52:43,450 payslip 5960 3668 爱分享 111724045 Agent has no AId.
+WARNING 2018-05-20 04:53:36,312 payslip 5960 11036 apple+静静 173164213 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:37,085 payslip 5960 1428 lucky杨+fen 120556634 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:37,085 payslip 5960 6976 E宝+伊哩咪 173146816 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:37,085 payslip 5960 13036 apple+西西 173146815 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:39,068 payslip 5960 15560 百花+幸福树 127802613 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:39,068 payslip 5960 9560 冰月+橘子 186212343 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:39,068 payslip 5960 4596 百花+小婷 127816025 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:40,237 payslip 5960 12556 枫叶秋实+叶子 186244318 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:41,010 payslip 5960 5512 橘子+田希 173136731 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:41,011 payslip 5960 12452 开心+山丘 184256870 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:42,161 payslip 5960 15380 蓝光+冰月 184302018 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:43,377 payslip 5960 15804 梅小姐+灰灰 185132056 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:44,137 payslip 5960 1288 利利+晓云 165850444 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:44,137 payslip 5960 14052 Amanda+Lizy 184294101 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:45,269 payslip 5960 16108 妮妮+Amanda 184248927 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:46,061 payslip 5960 5716 妮妮+E宝 186206455 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:46,062 payslip 5960 11292 妮姐+苏苏 190476634 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:47,218 payslip 5960 7656 飘雪+泊沄花开 186230796 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:48,011 payslip 5960 1748 璞绯+RL 146340083 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:48,011 payslip 5960 2724 璞绯+铃子 141258314 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:50,351 payslip 5960 1124 秋天猫+老张 132502347 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:51,119 payslip 5960 3592 山丘+悠悠 162470357 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:51,119 payslip 5960 1164 璞绯红包群 184294086 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:52,357 payslip 5960 12536 图图+乐乐 129304159 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:53,141 payslip 5960 13132 娃娃+菲菲 184248989 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:53,142 payslip 5960 5584 娃娃+豆豆 184256832 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:54,304 payslip 5960 7508 娃娃红包群二群 121096253 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:55,080 payslip 5960 7996 amy+畅想 127810490 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:55,081 payslip 5960 10208 娃娃红包群 184272516 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:57,056 payslip 5960 4288 薇欧氏+冷暖自知 191148952 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:57,056 payslip 5960 6188 微微+小佩 120570699 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:58,336 payslip 5960 5348 薇欧氏+筱莉 191158908 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:53:59,146 payslip 5960 12668 薇欧氏红包群 184276476 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:00,305 payslip 5960 1512 小牛+孟孟 185108787 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:01,106 payslip 5960 14676 幸福树+胖骨头 155552351 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:02,304 payslip 5960 2244 旋子+利利 130334372 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:03,098 payslip 5960 10420 旋子+那年花开 132950831 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:04,268 payslip 5960 4108 旋子+妮姐 131864332 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:05,029 payslip 5960 11900 伊哩咪+狂风 173630871 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:06,190 payslip 5960 2844 妖精+杜杜 185122364 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:07,007 payslip 5960 5936 angle+666 173632889 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:09,036 payslip 5960 6016 黄琳+黄宇 212974825 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:11,372 payslip 5960 2672 薇欧氏+副群主 88880005 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:12,168 payslip 5960 8096 周小君+苗苗 310490937 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:14,263 payslip 5960 9140 丫头+心舞 334098306 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:15,097 payslip 5960 15976 开心+英英 336417000 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:17,245 payslip 5960 5828 燕子+丫丫 351724112 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:21,086 payslip 5960 5800 米多+奕霖 366586085 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:22,657 payslip 5960 7116 angle+深谷幽蓝 141272070 计算成功
+WARNING 2018-05-20 04:54:26,048 payslip 5960 7396 lizy+毛毛 121240488 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:27,567 payslip 5960 4652 apple+yumi 151990715 计算成功
+WARNING 2018-05-20 04:54:27,567 payslip 5960 5212 Amanda+心心 149172250 计算成功
+WARNING 2018-05-20 04:54:28,019 payslip 5960 12796 vicky+lucky杨 185126281 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:28,712 payslip 5960 8828 apple+帅宝 173664269 计算成功
+WARNING 2018-05-20 04:54:28,717 payslip 5960 4344 apple+DD 173168161 计算成功
+WARNING 2018-05-20 04:54:29,435 payslip 5960 12372 apple+angel云 189326568 计算成功
+WARNING 2018-05-20 04:54:30,236 payslip 5960 15580 apple+敏敏 173140924 计算成功
+WARNING 2018-05-20 04:54:30,647 payslip 5960 10848 菲菲+豆子 127810942 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:30,647 payslip 5960 1272 百花+amy 185112630 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:31,648 payslip 5960 11300 静静+吃货 157514527 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:32,613 payslip 5960 1160 枫叶秋实+飘雪 126492171 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:32,613 payslip 5960 8936 隽隽+林林 186264075 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:32,613 payslip 5960 1972 橘子+扬帆远航 186190847 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:33,197 payslip 5960 7232 利利+黄琳 184280361 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:33,200 payslip 5960 5636 利利+花花 173144815 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:33,542 payslip 5960 8920 apple+小爱 150214304 计算成功
+WARNING 2018-05-20 04:54:34,081 payslip 5960 14592 铃子+凌雕漆 150424261 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:34,098 payslip 5960 10004 oli黄+谭芳 185106757 计算成功
+WARNING 2018-05-20 04:54:34,794 payslip 5960 16068 fen+云 120566481 计算成功
+WARNING 2018-05-20 04:54:35,349 payslip 5960 11612 apple+hp 150976539 计算成功
+WARNING 2018-05-20 04:54:35,368 payslip 5960 3148 梅小姐+旋子 122982897 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:36,408 payslip 5960 5220 敏敏+李景 150996438 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:37,520 payslip 5960 1168 妮妮+vivi 173168155 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:37,521 payslip 5960 4396 妮妮+贾妹 173138725 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:37,555 payslip 5960 8252 oli黄+菡之 120560968 计算成功
+WARNING 2018-05-20 04:54:37,785 payslip 5960 14892 百花+忘忧草 186214237 计算成功
+WARNING 2018-05-20 04:54:38,300 payslip 5960 12956 璞绯+百花 184280319 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:38,323 payslip 5960 7504 oli黄+小米 120570400 计算成功
+WARNING 2018-05-20 04:54:39,129 payslip 5960 8880 璞绯+梅小姐 184264695 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:39,129 payslip 5960 15148 璞绯+好伙伴 185132059 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:39,142 payslip 5960 4548 emma酱+淼仲子 184304016 计算成功
+WARNING 2018-05-20 04:54:40,593 payslip 5960 2408 璞绯+清清 185132069 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:40,593 payslip 5960 8328 璞绯+开心 184294052 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:41,018 payslip 5960 7820 璞绯+米多 184260779 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:41,021 payslip 5960 3020 秋天猫+英子 132494773 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:41,033 payslip 5960 4996 董姐+飘舞 186208378 计算成功
+WARNING 2018-05-20 04:54:42,846 payslip 5960 8128 逃离+小燕子 184264686 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:43,246 payslip 5960 15516 梅小姐+无尾熊 186204437 计算成功
+WARNING 2018-05-20 04:54:43,368 payslip 5960 8628 璞绯+熊熊 185134052 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:43,831 payslip 5960 3624 孟孟+果果 186244326 计算成功
+WARNING 2018-05-20 04:54:44,210 payslip 5960 152 娃娃+微微 185116507 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:44,211 payslip 5960 10792 娃娃+谭主 165868147 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:45,057 payslip 5960 13924 微微+隽隽 186230050 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:45,066 payslip 5960 6496 开心+小牛 184256862 计算成功
+WARNING 2018-05-20 04:54:45,072 payslip 5960 5964 米多+alice 186204451 计算成功
+WARNING 2018-05-20 04:54:46,127 payslip 5960 9612 薇欧氏+emma酱 184290244 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:46,129 payslip 5960 12812 薇欧氏+备 191168620 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:46,147 payslip 5960 11248 妮姐+华华 186216293 计算成功
+WARNING 2018-05-20 04:54:46,147 payslip 5960 3152 妮妮+白云 120572172 计算成功
+WARNING 2018-05-20 04:54:46,147 payslip 5960 10136 梅小姐+董姐 184278454 计算成功
+WARNING 2018-05-20 04:54:47,158 payslip 5960 5228 薇欧氏+oli黄 186204456 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:48,318 payslip 5960 9684 薇欧氏+逃离 184270656 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:48,318 payslip 5960 15732 薇欧氏+妮妮 184274402 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:48,492 payslip 5960 7648 璞绯+枫叶秋实 120570698 计算成功
+WARNING 2018-05-20 04:54:49,347 payslip 5960 8316 薇欧氏+周小君 184280254 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:50,091 payslip 5960 3232 薇欧氏+丫丫 191168613 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:50,092 payslip 5960 12972 西西+茹果 193254585 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:50,092 payslip 5960 10144 小火车+檬宝 186110654 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:50,101 payslip 5960 14272 田希+君子 153300828 计算成功
+WARNING 2018-05-20 04:54:51,159 payslip 5960 6524 璞绯+球球 120572428 计算成功
+WARNING 2018-05-20 04:54:52,080 payslip 5960 6452 西西+平平 174270658 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:52,080 payslip 5960 2260 幸福树+九儿 185102909 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:52,080 payslip 5960 15864 旋子+慧子 185124290 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:52,850 payslip 5960 2112 璞绯+loveabu 186262090 计算成功
+WARNING 2018-05-20 04:54:54,010 payslip 5960 12580 娃娃+apple 173162248 计算成功
+WARNING 2018-05-20 04:54:54,072 payslip 5960 7000 娃娃+Laura 144724626 计算成功
+WARNING 2018-05-20 04:54:54,097 payslip 5960 11396 旋子+月月 135988816 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:54,097 payslip 5960 1520 旋子+秋天猫 130460971 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:55,606 payslip 5960 9524 扬帆远航+淡然 157278258 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:56,070 payslip 5960 6648 丫头+Ada 186188785 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:56,070 payslip 5960 13852 丫头+王小刚 143934608 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:56,070 payslip 5960 3324 扬帆远航+催乳师 151008182 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:56,980 payslip 5960 13172 忘忧草+angle 127814273 计算成功
+WARNING 2018-05-20 04:54:57,023 payslip 5960 7120 妖精+乖乖 120556864 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:57,032 payslip 5960 10876 薇欧氏+大金融 191186044 计算成功
+WARNING 2018-05-20 04:54:57,032 payslip 5960 13716 璞绯+妖精 184256878 计算成功
+WARNING 2018-05-20 04:54:57,940 payslip 5960 5384 薇欧氏+蓝光 186200623 计算成功
+WARNING 2018-05-20 04:54:58,465 payslip 5960 12424 周小君+小白 185134035 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:54:58,881 payslip 5960 12640 小米+拽丫头 152850821 计算成功
+WARNING 2018-05-20 04:54:59,473 payslip 5960 12284 周小君+娜娜 210854281 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:00,537 payslip 5960 8968 娃娃+小火车 256790560 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:00,537 payslip 5960 11764 铃子+花式 222058027 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:01,101 payslip 5960 11176 薇欧氏+克拉克 88880003 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:01,102 payslip 5960 4260 薇欧氏+冥王 88880004 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:01,102 payslip 5960 10044 娃娃+Ting 88880001 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:02,200 payslip 5960 7092 娃娃+副群主 88880002 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:02,845 payslip 5960 2288 小燕子+小雨 185130223 计算成功
+WARNING 2018-05-20 04:55:02,846 payslip 5960 14340 熊熊+老巴子 122046301 计算成功
+WARNING 2018-05-20 04:55:03,854 payslip 5960 15632 谜雾+娟姐 316424350 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:03,855 payslip 5960 5992 开心+兜兜 315592368 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:04,558 payslip 5960 10172 lizy+老虎 315576766 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:04,559 payslip 5960 4704 小燕子+小金 329680365 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:05,855 payslip 5960 15652 周小君+希希 336438276 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:06,534 payslip 5960 7044 开心+燕子 336428365 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:06,534 payslip 5960 9420 平平+红红 339690366 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:06,534 payslip 5960 7364 周小君+敏儿 342974338 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:07,321 payslip 5960 10572 月月+冰雪 186200646 计算成功
+WARNING 2018-05-20 04:55:07,333 payslip 5960 12232 谜雾+兰草 351692453 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:07,960 payslip 5960 15408 旋子+熙彤 130326639 计算成功
+WARNING 2018-05-20 04:55:08,856 payslip 5960 10688 angle+唐老师 391934049 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:09,166 payslip 5960 8584 周小君+赵小妞 354010721 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:09,166 payslip 5960 13360 孟孟+越红 342982160 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:09,166 payslip 5960 5788 emma酱+仔仔妈 354032266 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:10,166 payslip 5960 8972 薇欧氏+红豆 358190106 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:11,142 payslip 5960 12940 心心+聚宝盆 151994621 计算成功
+WARNING 2018-05-20 04:55:11,167 payslip 5960 2932 微微+木木鱼 366582225 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:11,877 payslip 5960 8576 旋子+多米 145608365 计算成功
+WARNING 2018-05-20 04:55:11,887 payslip 5960 11160 妖精+谜雾 185120320 计算成功
+WARNING 2018-05-20 04:55:12,712 payslip 5960 8108 聚宝盆+施施 479706175 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:12,712 payslip 5960 14088 曹瑜+李加莉 362098402 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:12,812 payslip 5960 13568 云云+艳阳 173142830 计算成功
+WARNING 2018-05-20 04:55:12,875 payslip 5960 11772 薇欧氏+丫头 184290167 计算成功
+WARNING 2018-05-20 04:55:12,945 payslip 5960 9028 月月+妞妞 155130772 计算成功
+WARNING 2018-05-20 04:55:13,377 payslip 5960 1000 仔仔妈+87 483952263 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:13,377 payslip 5960 4680 小火车+周小猪 444314853 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:55:14,009 payslip 5960 4164 周小君+vicky 185092886 计算成功
+WARNING 2018-05-20 04:55:15,543 payslip 5960 11776 薇欧氏+春苗 88880006 计算成功
+WARNING 2018-05-20 04:55:17,216 payslip 5960 11428 铃子+小鱼 280240521 计算成功
+WARNING 2018-05-20 04:55:19,878 payslip 5960 8012 毛毛+唐唐 342972349 计算成功
+WARNING 2018-05-20 04:55:20,795 payslip 5960 16084 薇欧氏+曹瑜 260616413 计算成功
+WARNING 2018-05-20 04:55:22,360 payslip 5960 9816 逃离+雯小姐 362112003 计算成功
+WARNING 2018-05-20 04:55:22,596 payslip 5960 13824 娃娃+菜心 358178476 计算成功
+WARNING 2018-05-20 04:55:22,653 payslip 5960 3956 周小君+沈小吉 345720932 计算成功
+WARNING 2018-05-20 04:55:23,131 payslip 5960 6756 梅小姐+猫小姐 366586080 计算成功
+WARNING 2018-05-20 04:57:47,051 payslip 5960 13024 开始多线程计算工资
+WARNING 2018-05-20 04:57:48,465 payslip 5960 13120 爱分享 111724045 Agent has no AId.
+WARNING 2018-05-20 04:58:39,146 payslip 5960 15960 聚宝盆+施施 479706175 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:58:39,146 payslip 5960 15888 小火车+周小猪 444314853 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:58:39,146 payslip 5960 16352 仔仔妈+87 483952263 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:58:39,147 payslip 5960 16120 Amanda+Lizy 184294101 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:58:40,071 payslip 5960 11320 apple+静静 173164213 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:58:50,128 payslip 5960 2332 梅小姐+灰灰 185132056 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:58:56,232 payslip 5960 5092 璞绯+铃子 141258314 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:58:58,132 payslip 5960 13156 山丘+悠悠 162470357 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:05,028 payslip 5960 7264 薇欧氏+冷暖自知 191148952 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:11,070 payslip 5960 8940 旋子+秋天猫 130460971 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:15,048 payslip 5960 12792 妖精+杜杜 185122364 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:17,455 payslip 5960 6588 apple+西西 173146815 计算成功
+WARNING 2018-05-20 04:59:21,111 payslip 5960 640 开心+兜兜 315592368 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:28,098 payslip 5960 12816 孟孟+越红 342982160 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:32,785 payslip 5960 1360 vicky+lucky杨 185126281 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:33,448 payslip 5960 2728 冰月+橘子 186212343 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:34,055 payslip 5960 9012 百花+幸福树 127802613 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:35,653 payslip 5960 11460 amy+畅想 127810490 计算成功
+WARNING 2018-05-20 04:59:36,380 payslip 5960 1836 静静+吃货 157514527 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:37,182 payslip 5960 6196 橘子+田希 173136731 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:37,182 payslip 5960 13320 开心+山丘 184256870 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:38,120 payslip 5960 4104 E宝+伊哩咪 173146816 计算成功
+WARNING 2018-05-20 04:59:38,183 payslip 5960 9468 利利+花花 173144815 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:39,014 payslip 5960 3472 利利+晓云 165850444 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:39,018 payslip 5960 15196 lucky杨+fen 120556634 计算成功
+WARNING 2018-05-20 04:59:39,410 payslip 5960 9076 lizy+毛毛 121240488 计算成功
+WARNING 2018-05-20 04:59:39,611 payslip 5960 11344 百花+amy 185112630 计算成功
+WARNING 2018-05-20 04:59:39,616 payslip 5960 9160 angle+666 173632889 计算成功
+WARNING 2018-05-20 04:59:40,803 payslip 5960 13092 百花+小婷 127816025 计算成功
+WARNING 2018-05-20 04:59:41,655 payslip 5960 7580 妮妮+E宝 186206455 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:42,064 payslip 5960 12880 妮姐+苏苏 190476634 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:42,064 payslip 5960 5004 敏敏+李景 150996438 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:43,065 payslip 5960 11856 妮妮+vivi 173168155 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:43,065 payslip 5960 5908 妮妮+贾妹 173138725 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:43,154 payslip 5960 15432 菲菲+豆子 127810942 计算成功
+WARNING 2018-05-20 04:59:43,263 payslip 5960 1900 枫叶秋实+叶子 186244318 计算成功
+WARNING 2018-05-20 04:59:44,298 payslip 5960 15668 飘雪+泊沄花开 186230796 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:45,027 payslip 5960 13288 璞绯+开心 184294052 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:45,381 payslip 5960 9100 橘子+扬帆远航 186190847 计算成功
+WARNING 2018-05-20 04:59:46,095 payslip 5960 14256 璞绯+梅小姐 184264695 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:47,926 payslip 5960 14140 璞绯+米多 184260779 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:48,927 payslip 5960 10484 璞绯+熊熊 185134052 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:48,927 payslip 5960 7632 璞绯红包群 184294086 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:49,069 payslip 5960 2488 秋天猫+老张 132502347 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:49,069 payslip 5960 2304 秋天猫+英子 132494773 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:49,329 payslip 5960 7712 枫叶秋实+飘雪 126492171 计算成功
+WARNING 2018-05-20 04:59:49,329 payslip 5960 13832 隽隽+林林 186264075 计算成功
+WARNING 2018-05-20 04:59:50,015 payslip 5960 15288 娃娃+豆豆 184256832 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:50,015 payslip 5960 12048 图图+乐乐 129304159 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:50,699 payslip 5960 15532 铃子+凌雕漆 150424261 计算成功
+WARNING 2018-05-20 04:59:51,442 payslip 5960 15572 娃娃+谭主 165868147 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:52,008 payslip 5960 16124 娃娃+微微 185116507 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:52,008 payslip 5960 2400 娃娃红包群 184272516 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:53,175 payslip 5960 15956 薇欧氏+emma酱 184290244 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:54,242 payslip 5960 16100 微微+小佩 120570699 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:55,243 payslip 5960 9128 薇欧氏+oli黄 186204456 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:55,243 payslip 5960 7752 薇欧氏+备 191168620 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:56,318 payslip 5960 3744 薇欧氏+逃离 184270656 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:56,318 payslip 5960 11924 薇欧氏+筱莉 191158908 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:56,318 payslip 5960 13528 薇欧氏+妮妮 184274402 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:57,012 payslip 5960 15308 小牛+孟孟 185108787 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:57,241 payslip 5960 12528 蓝光+冰月 184302018 计算成功
+WARNING 2018-05-20 04:59:58,765 payslip 5960 10836 小火车+檬宝 186110654 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:59,765 payslip 5960 1572 西西+平平 174270658 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:59,766 payslip 5960 3932 西西+茹果 193254585 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 04:59:59,914 payslip 5960 4168 利利+黄琳 184280361 计算成功
+WARNING 2018-05-20 05:00:00,140 payslip 5960 8308 幸福树+九儿 185102909 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:00,140 payslip 5960 1772 薇欧氏+周小君 184280254 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:01,038 payslip 5960 6536 旋子+利利 130334372 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:02,011 payslip 5960 4472 旋子+妮姐 131864332 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:02,011 payslip 5960 8248 旋子+那年花开 132950831 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:02,011 payslip 5960 16296 旋子+月月 135988816 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:02,549 payslip 5960 15272 璞绯+好伙伴 185132059 计算成功
+WARNING 2018-05-20 05:00:03,243 payslip 5960 12892 扬帆远航+催乳师 151008182 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:03,254 payslip 5960 3864 璞绯+RL 146340083 计算成功
+WARNING 2018-05-20 05:00:04,423 payslip 5960 3132 梅小姐+旋子 122982897 计算成功
+WARNING 2018-05-20 05:00:06,093 payslip 5960 12200 妖精+乖乖 120556864 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:06,093 payslip 5960 11456 扬帆远航+淡然 157278258 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:06,666 payslip 5960 8800 璞绯+清清 185132069 计算成功
+WARNING 2018-05-20 05:00:07,167 payslip 5960 8392 周小君+娜娜 210854281 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:07,845 payslip 5960 12180 妮妮+Amanda 184248927 计算成功
+WARNING 2018-05-20 05:00:08,168 payslip 5960 9072 黄琳+黄宇 212974825 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:08,169 payslip 5960 10828 周小君+小白 185134035 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:08,581 payslip 5960 11168 璞绯+百花 184280319 计算成功
+WARNING 2018-05-20 05:00:08,779 payslip 5960 4140 娃娃+菲菲 184248989 计算成功
+WARNING 2018-05-20 05:00:09,168 payslip 5960 4672 娃娃+小火车 256790560 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:09,644 payslip 5960 6736 微微+隽隽 186230050 计算成功
+WARNING 2018-05-20 05:00:10,191 payslip 5960 1964 娃娃+副群主 88880002 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:10,205 payslip 5960 5848 薇欧氏+丫丫 191168613 计算成功
+WARNING 2018-05-20 05:00:10,715 payslip 5960 13040 娃娃红包群二群 121096253 计算成功
+WARNING 2018-05-20 05:00:11,038 payslip 5960 3568 逃离+小燕子 184264686 计算成功
+WARNING 2018-05-20 05:00:11,942 payslip 5960 7144 旋子+慧子 185124290 计算成功
+WARNING 2018-05-20 05:00:11,962 payslip 5960 12624 幸福树+胖骨头 155552351 计算成功
+WARNING 2018-05-20 05:00:12,518 payslip 5960 10028 丫头+Ada 186188785 计算成功
+WARNING 2018-05-20 05:00:12,622 payslip 5960 15100 谜雾+娟姐 316424350 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:12,967 payslip 5960 8384 丫头+王小刚 143934608 计算成功
+WARNING 2018-05-20 05:00:13,077 payslip 5960 11068 小燕子+小金 329680365 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:13,834 payslip 5960 10140 伊哩咪+狂风 173630871 计算成功
+WARNING 2018-05-20 05:00:14,563 payslip 5960 2624 开心+英英 336417000 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:14,590 payslip 5960 10592 铃子+花式 222058027 计算成功
+WARNING 2018-05-20 05:00:14,762 payslip 5960 4708 薇欧氏红包群 184276476 计算成功
+WARNING 2018-05-20 05:00:15,270 payslip 5960 15276 谜雾+兰草 351692453 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:15,274 payslip 5960 7644 娃娃+Ting 88880001 计算成功
+WARNING 2018-05-20 05:00:16,124 payslip 5960 10400 周小君+敏儿 342974338 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:16,138 payslip 5960 10000 薇欧氏+克拉克 88880003 计算成功
+WARNING 2018-05-20 05:00:17,104 payslip 5960 1056 angle+唐老师 391934049 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:17,988 payslip 5960 13044 薇欧氏+副群主 88880005 计算成功
+WARNING 2018-05-20 05:00:18,078 payslip 5960 11488 微微+木木鱼 366582225 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:18,089 payslip 5960 14144 薇欧氏+冥王 88880004 计算成功
+WARNING 2018-05-20 05:00:19,009 payslip 5960 1536 曹瑜+李加莉 362098402 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:20,010 payslip 5960 12644 米多+奕霖 366586085 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:00:21,220 payslip 5960 5712 lizy+老虎 315576766 计算成功
+WARNING 2018-05-20 05:00:24,454 payslip 5960 5032 周小君+苗苗 310490937 计算成功
+WARNING 2018-05-20 05:00:24,708 payslip 5960 1784 周小君+希希 336438276 计算成功
+WARNING 2018-05-20 05:00:24,870 payslip 5960 9776 丫头+心舞 334098306 计算成功
+WARNING 2018-05-20 05:00:25,619 payslip 5960 10608 开心+燕子 336428365 计算成功
+WARNING 2018-05-20 05:00:26,804 payslip 5960 15916 燕子+丫丫 351724112 计算成功
+WARNING 2018-05-20 05:00:27,004 payslip 5960 14420 薇欧氏+红豆 358190106 计算成功
+WARNING 2018-05-20 05:00:27,173 payslip 5960 844 平平+红红 339690366 计算成功
+WARNING 2018-05-20 05:00:27,673 payslip 5960 6484 周小君+赵小妞 354010721 计算成功
+WARNING 2018-05-20 05:00:28,102 payslip 5960 3168 emma酱+仔仔妈 354032266 计算成功
+WARNING 2018-05-20 05:02:59,421 payslip 5960 10624 开始多线程计算工资
+WARNING 2018-05-20 05:03:00,586 payslip 5960 6528 爱分享 111724045 Agent has no AId.
+WARNING 2018-05-20 05:04:12,306 payslip 5960 13376 apple+静静 173164213 计算成功
+WARNING 2018-05-20 05:04:15,323 payslip 5960 8352 百花+幸福树 127802613 计算成功
+WARNING 2018-05-20 05:04:16,033 payslip 5960 10412 vicky+lucky杨 185126281 计算成功
+WARNING 2018-05-20 05:04:17,237 payslip 5960 7100 Amanda+Lizy 184294101 计算成功
+WARNING 2018-05-20 05:04:17,305 payslip 5960 8500 橘子+田希 173136731 计算成功
+WARNING 2018-05-20 05:04:18,173 payslip 5960 6504 静静+吃货 157514527 计算成功
+WARNING 2018-05-20 05:04:18,355 payslip 5960 15540 冰月+橘子 186212343 计算成功
+WARNING 2018-05-20 05:04:20,253 payslip 5960 4636 利利+花花 173144815 计算成功
+WARNING 2018-05-20 05:04:20,645 payslip 5960 1100 开心+山丘 184256870 计算成功
+WARNING 2018-05-20 05:04:20,984 payslip 5960 15648 梅小姐+灰灰 185132056 计算成功
+WARNING 2018-05-20 05:04:22,009 payslip 5960 13896 敏敏+李景 150996438 计算成功
+WARNING 2018-05-20 05:04:22,232 payslip 5960 11644 利利+晓云 165850444 计算成功
+WARNING 2018-05-20 05:04:23,716 payslip 5960 3716 妮姐+苏苏 190476634 计算成功
+WARNING 2018-05-20 05:04:24,605 payslip 5960 15208 妮妮+vivi 173168155 计算成功
+WARNING 2018-05-20 05:04:26,758 payslip 5960 5656 妮妮+E宝 186206455 计算成功
+WARNING 2018-05-20 05:04:27,400 payslip 5960 10472 妮妮+贾妹 173138725 计算成功
+WARNING 2018-05-20 05:04:30,446 payslip 5960 13412 璞绯+铃子 141258314 计算成功
+WARNING 2018-05-20 05:04:32,841 payslip 5960 12816 飘雪+泊沄花开 186230796 计算成功
+WARNING 2018-05-20 05:04:36,738 payslip 5960 7736 璞绯+开心 184294052 计算成功
+WARNING 2018-05-20 05:04:37,021 payslip 5960 4368 微微+小佩 120570699 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:38,052 payslip 5960 15856 璞绯+熊熊 185134052 计算成功
+WARNING 2018-05-20 05:04:38,130 payslip 5960 13280 薇欧氏+备 191168620 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:38,135 payslip 5960 15564 薇欧氏+oli黄 186204456 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:39,205 payslip 5960 1716 薇欧氏+冷暖自知 191148952 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:39,706 payslip 5960 8188 秋天猫+老张 132502347 计算成功
+WARNING 2018-05-20 05:04:40,894 payslip 5960 15376 薇欧氏+筱莉 191158908 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:40,909 payslip 5960 4512 璞绯+梅小姐 184264695 计算成功
+WARNING 2018-05-20 05:04:40,930 payslip 5960 7404 山丘+悠悠 162470357 计算成功
+WARNING 2018-05-20 05:04:41,213 payslip 5960 15596 小牛+孟孟 185108787 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:41,213 payslip 5960 9344 小火车+檬宝 186110654 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:42,219 payslip 5960 6872 西西+茹果 193254585 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:42,340 payslip 5960 1616 秋天猫+英子 132494773 计算成功
+WARNING 2018-05-20 05:04:42,442 payslip 5960 6476 图图+乐乐 129304159 计算成功
+WARNING 2018-05-20 05:04:42,543 payslip 5960 1084 璞绯+米多 184260779 计算成功
+WARNING 2018-05-20 05:04:43,166 payslip 5960 4468 旋子+那年花开 132950831 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:43,425 payslip 5960 8516 娃娃+谭主 165868147 计算成功
+WARNING 2018-05-20 05:04:44,299 payslip 5960 12256 幸福树+九儿 185102909 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:44,312 payslip 5960 6560 璞绯红包群 184294086 计算成功
+WARNING 2018-05-20 05:04:45,026 payslip 5960 1392 扬帆远航+催乳师 151008182 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:45,026 payslip 5960 14112 妖精+乖乖 120556864 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:45,390 payslip 5960 13120 娃娃+微微 185116507 计算成功
+WARNING 2018-05-20 05:04:45,390 payslip 5960 15888 娃娃+豆豆 184256832 计算成功
+WARNING 2018-05-20 05:04:46,396 payslip 5960 16304 旋子+月月 135988816 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:47,086 payslip 5960 5436 妖精+杜杜 185122364 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:47,087 payslip 5960 8452 周小君+小白 185134035 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:48,273 payslip 5960 8964 娃娃+副群主 88880002 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:48,274 payslip 5960 5012 娃娃+小火车 256790560 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:49,600 payslip 5960 15828 谜雾+娟姐 316424350 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:50,601 payslip 5960 9576 开心+英英 336417000 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:50,602 payslip 5960 14600 开心+兜兜 315592368 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:51,601 payslip 5960 4952 小燕子+小金 329680365 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:51,602 payslip 5960 7560 谜雾+兰草 351692453 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:52,047 payslip 5960 13796 angle+唐老师 391934049 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:52,047 payslip 5960 13736 周小君+敏儿 342974338 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:53,047 payslip 5960 5888 米多+奕霖 366586085 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:53,047 payslip 5960 12340 孟孟+越红 342982160 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:53,363 payslip 5960 16080 薇欧氏+emma酱 184290244 计算成功
+WARNING 2018-05-20 05:04:54,031 payslip 5960 12248 曹瑜+李加莉 362098402 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:54,031 payslip 5960 15488 小火车+周小猪 444314853 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:04:55,141 payslip 5960 7196 仔仔妈+87 483952263 (1205, 'Lock wait timeout exceeded; try restarting transaction')
+WARNING 2018-05-20 05:05:00,453 payslip 5960 11752 旋子+妮姐 131864332 计算成功
+WARNING 2018-05-20 05:05:02,161 payslip 5960 8860 旋子+秋天猫 130460971 计算成功
+WARNING 2018-05-20 05:05:02,161 payslip 5960 15056 西西+平平 174270658 计算成功
+WARNING 2018-05-20 05:05:03,717 payslip 5960 13408 旋子+利利 130334372 计算成功
+WARNING 2018-05-20 05:05:04,000 payslip 5960 5180 扬帆远航+淡然 157278258 计算成功
+WARNING 2018-05-20 05:05:07,833 payslip 5960 5452 黄琳+黄宇 212974825 计算成功
+WARNING 2018-05-20 05:05:07,888 payslip 5960 1380 薇欧氏+妮妮 184274402 计算成功
+WARNING 2018-05-20 05:05:07,979 payslip 5960 13672 周小君+娜娜 210854281 计算成功
+WARNING 2018-05-20 05:05:08,087 payslip 5960 16352 娃娃红包群 184272516 计算成功
+WARNING 2018-05-20 05:05:08,289 payslip 5960 9184 聚宝盆+施施 479706175 计算成功
+WARNING 2018-05-20 05:05:08,293 payslip 5960 15584 微微+木木鱼 366582225 计算成功
+WARNING 2018-05-20 05:05:08,823 payslip 5960 10588 薇欧氏+逃离 184270656 计算成功
+WARNING 2018-05-20 05:05:09,657 payslip 5960 15980 薇欧氏+周小君 184280254 计算成功
+WARNING 2018-05-20 05:28:13,329 payslip 5960 15440 开始多线程计算工资
+WARNING 2018-05-20 05:28:14,220 payslip 5960 16700 爱分享 111724045 Agent has no AId.
+WARNING 2018-05-20 05:28:45,271 payslip 5960 17044 微微+小佩 120570699 计算成功
+WARNING 2018-05-20 05:28:45,949 payslip 5960 9156 薇欧氏+oli黄 186204456 计算成功
+WARNING 2018-05-20 05:28:46,564 payslip 5960 12176 薇欧氏+备 191168620 计算成功
+WARNING 2018-05-20 05:28:47,524 payslip 5960 1640 薇欧氏+冷暖自知 191148952 计算成功
+WARNING 2018-05-20 05:28:48,433 payslip 5960 2552 西西+茹果 193254585 计算成功
+WARNING 2018-05-20 05:28:48,893 payslip 5960 17376 薇欧氏+筱莉 191158908 计算成功
+WARNING 2018-05-20 05:28:51,084 payslip 5960 1292 旋子+那年花开 132950831 计算成功
+WARNING 2018-05-20 05:28:51,333 payslip 5960 3108 小牛+孟孟 185108787 计算成功
+WARNING 2018-05-20 05:28:53,496 payslip 5960 6708 小火车+檬宝 186110654 计算成功
+WARNING 2018-05-20 05:28:53,703 payslip 5960 14232 扬帆远航+催乳师 151008182 计算成功
+WARNING 2018-05-20 05:28:53,915 payslip 5960 6540 妖精+杜杜 185122364 计算成功
+WARNING 2018-05-20 05:28:55,065 payslip 5960 14440 幸福树+九儿 185102909 计算成功
+WARNING 2018-05-20 05:28:56,265 payslip 5960 16844 妖精+乖乖 120556864 计算成功
+WARNING 2018-05-20 05:28:57,296 payslip 5960 13100 开心+兜兜 315592368 计算成功
+WARNING 2018-05-20 05:28:57,669 payslip 5960 16944 周小君+小白 185134035 计算成功
+WARNING 2018-05-20 05:28:57,669 payslip 5960 6428 旋子+月月 135988816 计算成功
+WARNING 2018-05-20 05:28:59,375 payslip 5960 17268 娃娃+副群主 88880002 计算成功
+WARNING 2018-05-20 05:28:59,627 payslip 5960 16504 娃娃+小火车 256790560 计算成功
+WARNING 2018-05-20 05:29:02,258 payslip 5960 17012 谜雾+娟姐 316424350 计算成功
+WARNING 2018-05-20 05:29:02,266 payslip 5960 17392 开心+英英 336417000 计算成功
+WARNING 2018-05-20 05:29:03,566 payslip 5960 16480 孟孟+越红 342982160 计算成功
+WARNING 2018-05-20 05:29:04,544 payslip 5960 16516 谜雾+兰草 351692453 计算成功
+WARNING 2018-05-20 05:29:04,673 payslip 5960 14148 米多+奕霖 366586085 计算成功
+WARNING 2018-05-20 05:29:05,565 payslip 5960 6056 angle+唐老师 391934049 计算成功
+WARNING 2018-05-20 05:29:05,913 payslip 5960 17356 小燕子+小金 329680365 计算成功
+WARNING 2018-05-20 05:29:06,389 payslip 5960 8600 曹瑜+李加莉 362098402 计算成功
+WARNING 2018-05-20 05:29:06,711 payslip 5960 17060 小火车+周小猪 444314853 计算成功
+WARNING 2018-05-20 05:29:06,867 payslip 5960 11272 周小君+敏儿 342974338 计算成功
+WARNING 2018-05-20 05:29:06,935 payslip 5960 16692 仔仔妈+87 483952263 计算成功
