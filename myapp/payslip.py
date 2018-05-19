@@ -471,6 +471,9 @@ def CalculateIncome(agent, start, end):
     # agent.save()
 
 def sumup_pay_result(agent, start, end):
+    agent_pid = agent.AgentId
+    zhaohuo_pid = str(agent.ZhaohuoPid)
+    app_pid = str(agent.AppPid)
     ##################下线佣金计算#################################
     # 一级下线贡献佣金
     aggregatedLv1 = AliOrd.objects.filter(UplineId=agent_pid, SettleDate__range=(start, end)).aggregate(
