@@ -530,6 +530,8 @@ def save_pay_result(agent, start, end):
 #                    'IncomeLv1':      agent.IncomeLv1,
 #                    'IncomeLv2':      agent.IncomeLv2,
 #                    'IncomeTotal':    agent.IncomeTotal,
+                    'PayName':        agent.PayName,
+                    'PayAccount':     agent.PayAccount,
                     'Slug':           agent.Slug,
                     'CalculateStatus': agent.CalculateStatus,
                     'CalculateYear':  year,

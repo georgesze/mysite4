@@ -211,7 +211,9 @@ def upload_agent(request):
                                                                      'AgentPerc': line[11],
                                                                      'Agent2rdPerc': line[12],
                                                                      'Agent3rdPerc': line[13],
-                                                                     'Slug': line[2]
+                                                                     'Slug': line[2],
+                                                                     'PayName': line[16],
+                                                                     'PayAccount': line[17]
                                                                      })
                         response_return = '成功更新'
 
