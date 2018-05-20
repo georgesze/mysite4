@@ -160,10 +160,14 @@ def AgentList(request):
         sleep(5)
         t.join()
 
-        for agent in agent_list:
+        current_payresult = PayResult.objects.filter(CalculateYear=current_year,
+                                                     CalculateMonth=current_month,
+                                                     CalculateStatus='CPL')
+        for agent in current_payresult:
             sumup_pay_result(agent, start, end)
+
             # 保存月佣金计算记录
-            save_sumup_result(agent, start, end)
+            #save_sumup_result(agent, start, end)
 
 
         # 取到当前一期代理工资----用于显示
@@ -472,8 +476,10 @@ def CalculateIncome(agent, start, end):
 
 def sumup_pay_result(agent, start, end):
     agent_pid = agent.AgentId
-    zhaohuo_pid = str(agent.ZhaohuoPid)
-    app_pid = str(agent.AppPid)
+    #zhaohuo_pid = str(agent.ZhaohuoPid)
+    #app_pid = str(agent.AppPid)
+    if agent_pid == None:
+        return
     ##################下线佣金计算#################################
     # 一级下线贡献佣金
     aggregatedLv1 = AliOrd.objects.filter(UplineId=agent_pid, SettleDate__range=(start, end)).aggregate(
@@ -493,8 +499,12 @@ def sumup_pay_result(agent, start, end):
         agent.IncomeLv2 = aggregatedLv2['IncomeLv2']
 
     # 总佣金
-    agent.IncomeTotal = agent.IncomeSelf + agent.IncomeLv1 + agent.IncomeLv2
-
+    if agent.IncomeSelf != None:
+        agent.IncomeTotal = agent.IncomeSelf + agent.IncomeLv1 + agent.IncomeLv2
+    else:
+        agent.IncomeTotal = 0
+    # save to database
+    agent.save()
 
 def save_pay_result(agent, start, end):
     if not start == None:
@@ -517,9 +527,9 @@ def save_pay_result(agent, start, end):
                     'IncomeZhaohuo':  agent.IncomeZhaohuo,
                     'IncomeApp':      agent.IncomeApp,
                     'IncomeSelf':     agent.IncomeSelf,
-                    'IncomeLv1':      agent.IncomeLv1,
-                    'IncomeLv2':      agent.IncomeLv2,
-                    'IncomeTotal':    agent.IncomeTotal,
+#                    'IncomeLv1':      agent.IncomeLv1,
+#                    'IncomeLv2':      agent.IncomeLv2,
+#                    'IncomeTotal':    agent.IncomeTotal,
                     'Slug':           agent.Slug,
                     'CalculateStatus': agent.CalculateStatus,
                     'CalculateYear':  year,
