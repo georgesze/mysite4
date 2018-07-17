@@ -168,7 +168,7 @@ def upload_agent(request):
         # 打开文件
         # add agent entry
         fname = request.FILES['file'].temporary_file_path()
-        with open(fname, 'r') as f:
+        with open(fname, 'r', encoding='UTF-8') as f:
             #, encoding='UTF-8'
             reader = csv.reader(f)
 

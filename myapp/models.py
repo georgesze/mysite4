@@ -97,7 +97,7 @@ class AliConfig(models.Model):
     IncomeLv2 = models.DecimalField(max_digits=8, decimal_places=2, verbose_name='二级贡献佣金', blank=True, null=True)
     IncomeTotal = models.DecimalField(max_digits=8, decimal_places=2, verbose_name='总佣金', blank=True, null=True)
     CalculateStatus = models.CharField(max_length=10, verbose_name='计算状态', default='', blank=True)
-    PayAccount = models.CharField(max_length=20, verbose_name='收款账号', blank=True, null=True)
+    PayAccount = models.CharField(max_length=40, verbose_name='收款账号', blank=True, null=True)
     PayName = models.CharField(max_length=20, verbose_name='收款姓名', blank=True, null=True)
     Slug = models.SlugField(blank=True, null=True)
 
@@ -150,7 +150,7 @@ class PayResult(models.Model):
     CalculateStatus = models.CharField(max_length=10, verbose_name='计算状态', default='', blank=True, null=True)
     CalculateYear = models.CharField(max_length=4, verbose_name='计算年份', default='', blank=True, null=True)
     CalculateMonth = models.CharField(max_length=2, verbose_name='计算月份', default='', blank=True, null=True)
-    PayAccount = models.CharField(max_length=20, verbose_name='收款账号', blank=True, null=True)
+    PayAccount = models.CharField(max_length=40, verbose_name='收款账号', blank=True, null=True)
     PayName = models.CharField(max_length=20, verbose_name='收款姓名', blank=True, null=True)
     PayStatus = models.CharField(max_length=20, verbose_name='支付情况', blank=True, null=True)
     Slug = models.SlugField(blank=True, null=True)
