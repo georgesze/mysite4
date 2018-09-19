@@ -52,11 +52,8 @@ def upld(request):
                 for line in reader:
                     line_num = line_num + 1
                     if (line_num != 1):
-                        # if AliOrd.objects.filter(OrderId=line[24]).exists():
-                        #     x = x + 1
-                        #     AliOrd.objects.filter(OrderId=line[24]).delete()
-                        # else:
-                        #     y = y + 1
+                        x = x + 1
+                        y = y + 1
                         WorkList.append(AliOrd(CreatDate=line[0],
                                                ClickDate=line[1],
                                                CommType=line[2],
@@ -76,20 +73,25 @@ def upld(request):
                                                SettleDate=line[16],
                                                RebatePerc=line[17],
                                                RebateAmt=line[18],
-                                               AllowancePerc=line[19],
-                                               AllowanceAmt=line[20],
-                                               AllowanceType=line[21],
-                                               Platform=line[22],
-                                               ThirdParty=line[23],
-                                               OrderId=int(line[24]),
-                                               Category=line[25],
-                                               MediaId=line[26],
-                                               MediaName=line[27],
-                                               PosID=line[28],
-                                               PosName=line[29]))
+                                               AllowancePerc=line[20],
+                                               AllowanceAmt=line[21],
+                                               AllowanceType=line[22],
+                                               Platform=line[23],
+                                               ThirdParty=line[24],
+                                               OrderId=int(line[25]),
+                                               Category=line[26],
+                                               MediaId=line[27],
+                                               MediaName=line[28],
+                                               PosID=line[29],
+                                               PosName=line[30]))
+                        if x < 5000:
+                            continue
+                        else:
+                            # update_or_create
+                            AliOrd.objects.bulk_create(WorkList)
+                            x = 0
+                            WorkList = []
 
-            # update_or_create
-            AliOrd.objects.bulk_create(WorkList)
             order_list = []
             agent_file = UserForm()
 

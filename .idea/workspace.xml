@@ -12,41 +12,23 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/mysite4$calculate_income.coverage" NAME="calculate_income Coverage Results" MODIFIED="1521132566906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/myapp/management/commands" />
   </component>
-  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" module-name="mysite4" is-module-sdk="true">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+    <option name="myUseModuleSdk" value="true" />
+    <option name="myModuleName" value="mysite4" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="upld.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="upld.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myapp/upld.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3175">
-              <caret line="151" column="9" lean-forward="false" selection-start-line="151" selection-start-column="9" selection-end-line="151" selection-end-column="9" />
+            <state relative-caret-position="595">
+              <caret line="70" column="66" lean-forward="true" selection-start-line="70" selection-start-column="66" selection-end-line="70" selection-end-column="66" />
               <folding>
                 <element signature="e#39#49#0" expanded="true" />
+                <element signature="e#7156#10435#0" expanded="false" />
+                <element signature="e#10477#14208#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="payslip.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/myapp/payslip.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1988">
-              <caret line="605" column="8" lean-forward="false" selection-start-line="605" selection-start-column="8" selection-end-line="605" selection-end-column="8" />
-              <folding>
-                <element signature="e#15#68#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2425">
-              <caret line="99" column="46" lean-forward="false" selection-start-line="99" selection-start-column="46" selection-end-line="99" selection-end-column="46" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -128,8 +110,8 @@
         <option value="$PROJECT_DIR$/templates/myapp/upld.html" />
         <option value="$PROJECT_DIR$/templates/myapp/dashboard.html" />
         <option value="$PROJECT_DIR$/myapp/payslip.py" />
-        <option value="$PROJECT_DIR$/myapp/upld.py" />
         <option value="$PROJECT_DIR$/myapp/models.py" />
+        <option value="$PROJECT_DIR$/myapp/upld.py" />
       </list>
     </option>
   </component>
@@ -161,7 +143,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,6 +179,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -206,7 +188,15 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Django Console" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="mysite4" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="mysite4" />
+      </console-settings>
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -360,13 +350,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/myapp/upld.py</url>
-          <line>309</line>
+          <line>311</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/myapp/views.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="67" />
+          <url>file://$PROJECT_DIR$/myapp/upld.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/static/admin/js/actions.js</url>
@@ -374,7 +364,7 @@
           <option name="timeStamp" value="62" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="68" />
+      <option name="time" value="70" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -449,14 +439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="145" column="38" lean-forward="false" selection-start-line="145" selection-start-column="38" selection-end-line="145" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Lib/site-packages/django/core/files/uploadedfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -569,24 +551,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Python/Lib/site-packages/django/core/handlers/exception.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Lib/site-packages/django/core/serializers/json.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2450">
           <caret line="113" column="44" lean-forward="true" selection-start-line="113" selection-start-column="44" selection-end-line="113" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Lib/site-packages/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -681,16 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/myapp/payslip.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -702,23 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/myapp/upld.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="60" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/upld.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3175">
-          <caret line="151" column="9" lean-forward="false" selection-start-line="151" selection-start-column="9" selection-end-line="151" selection-end-column="9" />
-          <folding>
-            <element signature="e#39#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -739,10 +680,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp/payslip.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1988">
+        <state relative-caret-position="250">
           <caret line="605" column="8" lean-forward="false" selection-start-line="605" selection-start-column="8" selection-end-line="605" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#15#68#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/myapp/upld.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="11" column="51" lean-forward="false" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/site-packages/django/core/files/uploadedfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/upld.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="70" column="66" lean-forward="true" selection-start-line="70" selection-start-column="66" selection-end-line="70" selection-end-column="66" />
+          <folding>
+            <element signature="e#39#49#0" expanded="true" />
+            <element signature="e#7156#10435#0" expanded="false" />
+            <element signature="e#10477#14208#0" expanded="false" />
           </folding>
         </state>
       </provider>
