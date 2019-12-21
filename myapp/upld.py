@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 import csv
 import xlwt
+import codecs
 
 # import os
 # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "www.settings")
@@ -33,7 +34,6 @@ class UserForm(forms.Form):
 
 
 def upld(request):
-    x = y = 0
     if (request.method == "POST") and ('upload_order' in request.POST):
         uf = UserForm(request.POST, request.FILES)
         if uf.is_valid():
@@ -43,18 +43,16 @@ def upld(request):
             fname = request.FILES['file'].temporary_file_path()
             # myfile = csv.reader(open(fname, 'r', encoding='UTF-8'))
 
-            with open(fname, 'r', encoding='UTF-8') as f:
+            # with open(fname, 'r', encoding='UTF-8') as f:
+            with codecs.open(fname, 'r', encoding='GBK') as f:
                 reader = csv.reader(f)
 
-                WorkList = []
-                line_num = 0
-                x = y = 0
+                lt_worklist = []
+                lv_num = 0
                 for line in reader:
-                    line_num = line_num + 1
-                    if (line_num != 1):
-                        x = x + 1
-                        y = y + 1
-                        WorkList.append(AliOrd(CreatDate=line[0],
+                    lv_num = lv_num + 1
+                    if (lv_num != 1):
+                        lt_worklist.append(AliOrd(CreatDate=line[0],
                                                ClickDate=line[1],
                                                CommType=line[2],
                                                CommId=line[3],
@@ -84,13 +82,14 @@ def upld(request):
                                                MediaName=line[28],
                                                PosID=line[29],
                                                PosName=line[30]))
-                        if x < 5000:
-                            continue
-                        else:
+                        if lv_num % 5000 == 0:
                             # update_or_create
-                            AliOrd.objects.bulk_create(WorkList)
-                            x = 0
-                            WorkList = []
+                            AliOrd.objects.bulk_create(lt_worklist)
+                            time3 = time.time()
+                            lt_worklist = []
+
+                # Update rest of the lines
+                AliOrd.objects.bulk_create(lt_worklist)
 
             order_list = []
             agent_file = UserForm()
@@ -157,8 +156,6 @@ def upld(request):
         # Person.objects.filter(age__gt=18).values_list()#括号可以指定需要的字段，一般使用这种方法。
         order_list = AliOrd.objects.all()
     return render(request, 'myapp/upld.html', {'uf': uf,
-                                               'upd_unm': x,
-                                               'new_unm': y,
                                                'order_list': order_list,
                                                'agent_file': agent_file})
 
